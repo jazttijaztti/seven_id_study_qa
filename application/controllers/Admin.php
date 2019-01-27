@@ -3,6 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin extends CI_Controller {
 
+    public $permission_status = "";
     public function __construct(){
         parent::__construct();
         $this->load->database();
@@ -14,6 +15,7 @@ class Admin extends CI_Controller {
         $this->load->library('pagination');  
         $this->load->library('session');
         $s_id = $this->session->userdata('s_id');
+        $this->permission_status = $this->session->userdata('permission_status');
         if (empty($s_id)) {
             redirect('login/index');
         }
@@ -40,6 +42,9 @@ class Admin extends CI_Controller {
 
     //QAの入力画面
     public function create(){
+        if ($this->permission_status != 1) {
+           redirect('qa/index');
+        }
 		$this->load->view('admin_create');
     }
 

@@ -27,11 +27,12 @@ class Login extends CI_Controller {
         $param['password'] = $this->input->post('password');
         $this->load->model('Admin_model');
         $username = $this->Admin_model->search_admin($param);
-        if (!empty($username[0][username])) {
+        if (!empty($username[0]['username'])) {
             //ログインさせる
-             $sessions['username'] = "yamamoto";
-             $sessions['hobby']    = "biliyard";
+             $sessions['username'] = $username[0]['username'];
+             $sessions['hobby']    = $username[0]['hobby'];
              $sessions['s_id']      = $this->session->session_id;
+             $sessions['permission_status'] = $username[0]['permission_status'];
              $this->session->set_userdata($sessions);  
              redirect('qa/index');
         } else {
