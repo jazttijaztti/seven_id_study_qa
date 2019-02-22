@@ -30,7 +30,7 @@ class Event extends CI_Controller {
        $data['test'] = 'test';
        //loading view
        $this->load->view('event/index',$data);
-    
+   }    
 
 
 
@@ -40,6 +40,7 @@ class Event extends CI_Controller {
     {
 
         //ページングのためのライブラリを読み込みます。
+/*
         $page_config['base_url'] = base_url('qa/index');
         $page_config['total_rows'] = $this->Faq_model->count_faq();
         $page_config['per_page'] = 10;
