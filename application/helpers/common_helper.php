@@ -26,5 +26,30 @@ function show_hotel_from_id($hotel_id) {
     }
 }
 
+//indexs.cssは必ず読み込まれる。
+//それ以外のcssを読みたかったら配列の値にファイル名を入れる
+function show_common_css($param = false){ 
+  $CI =& get_instance();
+  $CI->load->view('event/common/index.css' $param);
+  if ($param != false) {
+     foreach ($param as $key => $val) {
+        $CI->load->view('event/common/'.$val.'.css');
+     }
+
+  }
+}
+
+//indexs.jsは必ず読み込まれる。
+//それ以外のjsを読みたかったら配列の値にファイル名を入れる
+function show_common_js($param = false){ 
+  $CI =& get_instance();
+  $CI->load->view('event/common/index.js');
+  if ($param != false) {
+     foreach ($param as $key => $val) {
+        $CI->load->view('event/common/'.$val.'.js');
+     }
+
+  }
+}
 
 ?>

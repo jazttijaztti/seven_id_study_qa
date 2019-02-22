@@ -1,23 +1,17 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<meta charaset=ut-8>
+
+<meta charaset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="<?= base_url();?>static/sevenevent/css/seven.css" rel="stylesheet">
-<link href="<?= base_url();?>static/sevenevent/css/reset.css" rel="stylesheet">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" type="text/javascript"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
-<link rel="stylesheet" type="text/css" href="<?= base_url();?>static/sevenevent/slick/slick/slick.css"/>
-<link rel="stylesheet" type="text/css" href="<?= base_url();?>static/sevenevent/slick/slick/slick-theme.css"/>
-<script type="text/javascript" src="<?= base_url();?>static/sevenevent/slick/slick/slick.min.js">
-  <script src="http://code.jquery.com/jquery-2.0.3.js"></script>
-<script src="<?= base_url();?>static/sevenevent/jquery.rotate-master/jquery.rotate.js"></script>
-<script src="<?= base_url();?>static/sevenevent/js/seven.js"></script>
+<?php show_common_css(); ?>
+
+<?php show_common_js(); ?>
 <script>
 
-
-
 </script>
+
+
 </head>
 <body>
 <div class="all">
