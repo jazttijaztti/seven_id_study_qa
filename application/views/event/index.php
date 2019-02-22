@@ -15,40 +15,7 @@
 </head>
 <body>
 <div class="all">
-  <div id="nav-drawer">
-      <input id="nav-input" type="checkbox" class="nav-unshown">
-      <label id="nav-open" for="nav-input"><span></span></label>
-      <label class="nav-unshown" id="nav-close" for="nav-input"></label>
-      <div id="nav-content">
-
-        <h2>SEVEN PLACE</h2>
-        <ul>
-            <li class="back1"><a href="#top">TOP</a></li>
-            <li class="back1"><a href="html/event.html">EVENT</a></li>
-             <li><a href="html/finished.html">FINISHED EVENT</a></li>
-            <li class="back1"><a href="html/space.html">SPACE</a></li>
-            <li class="back1"><a href="html/system.html">SYSTEM</a></li>
-            <li class="back1"><a href="html/cafe.html">CAFE</a></li>
-            <li class="back1"><a href="html/access.html">ACCESS</a></li>
-            <a href=""><li class="back2" >CONTACT</li></a>
-        </ul>
-      </div>
-  </div>
-
-
-    <div class="header">
-        <ul>
-            <li><a href="#top">TOP</a></li>
-            <li><a href="html/event.html">EVENT</a></li>
-            <li><a href="html/space.html">SPACE</a></li>
-            <li><a href="html/system.html">SYSTEM</a></li>
-            <li><a href="html/cafe.html">CAFE</a></li>
-            <li><a href="html/access.html">ACCESS</a></li>
-            <a href=""><li class="header__contact">CONTACT</li></a>
-        </ul>
-    </div><!--header-->
-
-
+  <?php show_header(); ?>
 
 
     <div id="top">
