@@ -42,7 +42,7 @@ CKEDITOR.editorConfig = function( config ) {
   config.filebrowserBrowseUrl = '../../../static/plugins/kcfinder/browse.php?type=files';
   config.filebrowserImageBrowseUrl = '../../../static/plugins/kcfinder/browse.php?type=images';
   config.filebrowserFlashBrowseUrl = '../../../static/plugins/kcfinder/browse.php?type=flash';
-  config.filebrowserUploadUrl = '../../../static/plugins/kcfinder/upload.php?type=files';
+  config.filebrowserUploadUrl = '../../../statics/plugin/kcfinder/upload.php?type=files';
   config.filebrowserImageUploadUrl = '../../../static/plugins/kcfinder/upload.php?type=images';
   config.filebrowserFlashUploadUrl = '../../../static/plugins/kcfinder/upload.php?type=flash';
   config.height = '500px';
