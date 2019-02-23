@@ -1,0 +1,976 @@
+
+body {
+    font-family: '游ゴシック体', 'Yu Gothic', YuGothic, sans-serif;
+}
+
+.header{
+    z-index: 50;
+    position: fixed;
+    writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode:vertical-rl;
+    text-orientation: sideways;
+    margin-top: 10%;
+    margin-right: 10%;
+    display: none;
+    height: 100%;
+    text-shadow: 1px 1px 1px #999999;
+    font-size:20px;
+}
+
+.header ul li a{
+    color: #ffff;
+}
+.header ul li{
+    display: inline-block;
+    color: #ffff;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+.header__contact{
+    background-color: #000000;
+    padding: 5px;
+}
+
+.menu ul li{
+    margin-top: 10%;
+    display: inline-block;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 25px;
+}
+
+.menu ul{
+    width: 100%;
+
+    text-align: center;
+}
+.menu a{
+    color: #ffff;
+}
+
+#top{
+    background-color: #968686;
+    height: 100vh;
+    z-index: 0;
+}
+
+#top h1{
+    text-align: center;
+    padding-top: 10%;
+    vertical-align: middle;
+    font-size: 130px;
+    color: #ffff;
+    line-height: 90PX;
+    letter-spacing: 15px;
+}
+
+.top__logo{
+    margin-top: 5%;
+     height: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.top__logo img{
+    height: 100%;
+    width: 100%;
+}
+
+.top__logo a{
+    height: 100%;
+}
+
+#event{
+    margin-top: 10%;
+}
+
+.h2__title{
+    writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode:vertical-rl;
+    text-orientation: sideways;
+    font-size: 60px;
+    float: left;
+    width: 20%;
+}
+
+
+
+.block{
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.block img{
+    width: 100%;
+}
+
+.event__img{
+    width: 45%;
+    float: left;
+}
+
+.event__block__contents2{
+    clear: both;
+    padding-top: 10%;
+}
+
+.event__img2{
+    width: 40%;
+    margin-top: 20%;
+}
+.event__content{
+    padding-left: 50%;
+}
+.event__content1{
+    display: flex;
+    justify-content: space-between;
+}
+
+.event__content2{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-size: 20px;
+    line-height: 25px;
+
+}
+
+.event__content3{
+    font-size: 13px;
+    line-height: 20px;
+
+
+}
+.day{
+    font-size: 30px;
+    padding-top: 15px;
+}
+
+.well__icon{
+    background-color: black;
+    color: white;
+    border:solid 2px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 15px;
+}
+
+.kikka__icon{
+    background-color: white;
+    color: black;
+    border:solid 2px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 15px;
+}
+
+#finished{
+    margin-top: 10%;
+    background-color: #EFEFEF;
+    padding-top: 5%;
+    overflow: auto;
+    padding-bottom: 5%;
+}
+.finished__title{
+    clear: both;
+    writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode:vertical-rl;
+    text-orientation: sideways;
+    font-size: 40px;
+    float: left;
+    width: 20%;
+    height: auto;
+}
+
+.block2{
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.finished__block{
+    width: 90%;
+}
+.finished__block__block{
+    width: 95%;
+    margin-right: 5%;
+    position: relative;
+    z-index: 1;
+    padding-top: 10%;
+}
+
+.finished__block__block h3{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    line-height: 25px;
+    font-size: 18px;
+}
+
+.finished__border{
+    border-top: solid 1px;
+    margin-bottom: 5%;
+}
+
+.finished__content{
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.well{
+    background-color: black;
+    color: white;
+    border:solid 2px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 15px;
+    z-index: 2;
+    position: absolute;
+    margin-left: 20%;
+}
+
+.kikka{
+    background-color: white;
+    color: black;
+    border:solid 2px;
+        height: 50px;
+    width: 50px;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 15px;
+    z-index: 2;
+    position: absolute;
+    margin-left: 20%;
+}
+
+.block2 img{
+    width: 100%;
+}
+
+#space{
+    clear: both;
+    margin-top: 5%;
+    padding-bottom: 5%;
+}
+#space img{
+    width: 100%;
+}
+.space__slider2{
+    width: 100%;
+}
+.space__left{
+    width: 50%;
+    margin-top: 5%;
+}
+
+.space__left h3{
+    font-size: 18px;
+    line-height: 22px;
+}
+.space__left__content1{
+    margin-top: 5%;
+    line-height: 15px;
+    font-size: 12px;
+}
+.space__left__content2{
+    margin-top: 10%;
+}
+.space__left__content2 ul li{
+ display: inline-block;
+ font-size: 12px;
+ line-height: 15px;
+}
+.space__left__content2 ul li:before{
+    content:"・";
+}
+.space__right{
+    width: 50%;
+    margin-top: 5%;
+}
+
+.flex{
+    display: flex;
+}
+#system{
+    clear: both;
+    background-color:  #EFEFEF;
+    padding-bottom: 10%;
+    padding-top: 5%;
+
+}
+
+#system img{
+    width: 100%;
+}
+.tabblock{
+    width: 50%;
+    margin-left: 25%;
+}
+.tabs {
+  margin-top: 12px;
+  width: 50%;
+  margin-left: 25%;
+  position: relative;
+}
+
+ .margin{
+    margin-top: 10%;
+ }
+
+
+ .tabs2{
+     margin-top: 12px;
+     width: 50%;
+     margin-left: 25%;
+     margin-right: 25%;
+     position: relative;
+ }
+
+/* タブのスタイル */
+.tabs2 .tab2-label {
+  display: inline-block;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  border: 2px solid #000;
+  background-color: #000;
+  margin-left: 1px;
+  margin-right: 1px;
+  padding: 2% 2%;
+  font-size: 0.9em;
+  color: #ffff;
+   writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode:vertical-rl;
+    text-orientation: sideways;
+    position: absolute;
+    font-size: 15px;
+    padding-bottom: 5%;
+    padding-top: 5%;
+        right: -15px;
+
+}
+ 
+/* タブにマウスカーソルがのったときフッター */
+.tabs2 .tab2-label:hover {
+  opacity: 0.7;
+}
+ 
+/* ラジオボタンと内容を非表示 */
+.tabs2 input[name="tab2-radio"],
+.tabs2 .tab2-content {
+  display: none;
+}
+ 
+/* タブ内容のスタイル */
+.tabs2 .tabs-content{
+  border: 1px solid #999;
+  padding: 10px;
+  min-height: 200px;
+}
+ 
+/* 選択されているタブのコンテンツのみを表示 */
+.tabs2 #tab2-1:checked ~ .tab2-1-content,
+.tabs2 #tab2-2:checked ~ .tab2-2-content,
+.tabs2 #tab2-3:checked ~ .tab2-3-content,
+.tabs2 #tab2-4:checked ~ .tab2-4-content,
+.tabs2 #tab2-5:checked ~ .tab2-5-content {
+  display: block;
+}
+
+ 
+/* 選択されているタブのスタイルを変える */
+.tabs2 input[name="tab2-radio"]:checked + .tab2-label {
+  background-color: #fff;
+    color: black;
+
+}
+.tab2{
+    top:15%;
+}
+.tab3{
+    top:20%;
+
+}
+
+/* タブのスタイル */
+.tabs .tab-label {
+  display: inline-block;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  border: 2px solid #000;
+  background-color: #000;
+  margin-left: 1px;
+  margin-right: 1px;
+  padding: 2% 2%;
+  font-size: 0.9em;
+  color: #ffff;
+   writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode:vertical-rl;
+    text-orientation: sideways;
+    position: absolute;
+    right: -15px;
+    font-size: 15px;
+    padding-bottom: 5%;
+    padding-top: 5%;
+
+
+}
+ 
+/* タブにマウスカーソルがのったときフッター */
+.tabs .tab-label:hover {
+  opacity: 0.7;
+}
+ 
+/* ラジオボタンと内容を非表示 */
+.tabs input[name="tab-radio"],
+.tabs .tab-content {
+  display: none;
+}
+ 
+/* タブ内容のスタイル */
+.tabs .tab-content{
+  min-height: 200px;
+  width: 100%;
+}
+ 
+/* 選択されているタブのコンテンツのみを表示 */
+.tabs #tab-1:checked ~ .tab-1-content,
+.tabs #tab-2:checked ~ .tab-2-content,
+.tabs #tab-3:checked ~ .tab-3-content,
+.tabs #tab-4:checked ~ .tab-4-content,
+.tabs #tab-5:checked ~ .tab-5-content {
+  display: block;
+}
+
+ 
+/* 選択されているタブのスタイルを変える */
+.tabs input[name="tab-radio"]:checked + .tab-label {
+  background-color: #fff;
+  color: black;
+}
+
+.reserve{
+    width: 40%;
+    text-align: center;
+    margin-right: 30%;
+    margin-left: 30%;
+    padding-top: 2%;
+    padding-bottom:2%;
+    padding-right: 2%;
+    padding-left: 2%;
+    background-color: #000000;
+    border-radius: 10px;
+    margin-top: 5%;
+    color: white;
+}
+.reserve p{
+    color: white;
+}
+
+#cafe{
+    clear: both;
+    padding-top: 5%;
+    background-image: url(../img/bg_wellcafe.jpg);
+    background-size: cover;
+    width: 100%;
+    padding-bottom: 5%;
+}
+
+.space__slider{
+    width: 100%;
+}
+.cafe__contents h3{
+    padding-top: 10%;
+    line-height: 25px;
+    letter-spacing: 6px;
+    padding-bottom: 10%;
+}
+.cafe__contents p{
+    font-size: 12px;
+    line-height: 20px;
+}
+.cafe__contents{
+    width: 25%;
+    margin-left: 25%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 3%;
+    background-color:rgba(255,255,255,0.60);
+}
+.cafe__menu{
+    margin-top: 15%;
+    font-size: 12px;
+    line-height: 20px;
+
+}
+
+.cafe__price{
+    margin-top: 15%;
+    font-size: 12px;
+    line-height: 20px;
+    margin-left: 20%;
+
+}
+
+.cafe__logo{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20%;
+}
+
+#access{
+    background-color: #EFEFEF;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+.access__block{
+    width: 45%;
+}
+.access__contact{
+    width: 80%;
+    text-align: center;
+    margin-right: 10%;
+    margin-left: 10%;
+    padding-top: 4%;
+    padding-bottom:4%;
+    padding-right: 5%;
+    padding-left: 5%;
+    background-color: #000000;
+    border-radius: 10px;
+    color: white;
+    margin-top: 5%;
+    clear: both;
+
+}
+.access__logo{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.access__logo img{
+    width: 30%;
+    height: 30%;
+}
+.map{
+    display: flex;
+    width: 40%;
+}
+.map img{
+    width: 60%;
+    height: auto;
+}
+.access__logo2{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    justify-content: space-between;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+.access__logo2 img{
+    width: 50%;
+    height: auto;
+}
+.map2{
+        display: flex;
+
+}
+.map2 img{
+    width: 60%;
+}
+.flex2{
+    display: flex;
+    justify-content: space-between;
+}
+.access__content h3{
+    font-size: 15px;
+    padding-bottom: 5%;
+}
+
+.access__content p{
+    line-height: 20px;
+    font-size: 12px;
+}
+
+.footer{
+    background-color: #000000;
+    color: #ffff;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.footer__left{
+    padding-left: 10%;
+    padding-top: 2%;
+}
+.footer__right{
+    display: flex;
+    justify-content: space-between;
+}
+.footer img{
+    width: 60%;
+}
+.slick-next {
+    right: 15px !important;
+}
+.slick-prev {
+    left: 15px !important;
+    z-index: 100;
+}
+#nav-drawer {
+  position: fixed;
+  width: 20%;
+  padding-top: 5%;
+}
+
+/*チェックボックス等は非表示に*/
+.nav-unshown {
+  display:none;
+}
+
+/*アイコンのスペース*/
+#nav-open {
+  display: none;
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+  text-align: right;
+  
+}
+
+/*ハンバーガーアイコンをCSSだけで表現*/
+#nav-open span, #nav-open span:before, #nav-open span:after {
+  position: absolute;
+  height: 5px;/*線の太さ*/
+  width: 40px;/*長さ*/
+  border-radius: 3px;
+  background: #555;
+  display: block;
+  content: '';
+  cursor: pointer;
+  padding-top: 5px;
+}
+#nav-open span:before {
+  bottom: -15px;
+}
+#nav-open span:after {
+  bottom: -30px;
+}
+
+/*閉じる用の薄黒カバー*/
+#nav-close {
+  display: none;/*はじめは隠しておく*/
+  position: fixed;
+  z-index: 99;
+  top: 0;/*全体に広がるように*/
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  transition: .3s ease-in-out;
+}
+
+/*中身*/
+#nav-content {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;/*最前面に*/
+  width: 90%;/*右側に隙間を作る（閉じるカバーを表示）*/
+  max-width: 330px;/*最大幅（調整してください）*/
+  height: 100%;
+  background: #fff;/*背景色*/
+  transition: .3s ease-in-out;/*滑らかに表示*/
+  -webkit-transform: translateX(-105%);
+  transform: translateX(-105%);/*左に隠しておく*/
+  background-color: #EFEFEF;
+}
+#nav-content ul{
+    margin-top: 10%;
+    text-align: center;
+}
+#nav-content h2{
+    text-align: center;
+    color: #968686;
+    margin-top: 30px;
+    font-size:30px;
+}
+#nav-content li{
+    margin-top: 5%;
+    padding-bottom: 5%;
+
+    text-align: center;
+    border-bottom: solid 2px #968686;
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+
+}
+.close img{
+    width: 10%;
+    margin-left: 90%;
+}
+/*チェックが入ったらもろもろ表示*/
+#nav-input:checked ~ #nav-close {
+  display: block;/*カバーを表示*/
+  opacity: .5;
+}
+
+#nav-input:checked ~ #nav-content {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);/*中身を表示（右へスライド）*/
+  box-shadow: 6px 0 25px rgba(0,0,0,.15);
+}
+
+.back1{
+}
+
+@media(max-width: 1000px){
+    .menu{
+        display: none;
+    }
+    #top {
+        padding-top: 15%;
+    }
+    .top__logo{
+        height: 20%;
+    }
+    .flex{
+        display: block;
+    }
+    .kikka{
+        margin-left: 40%;
+        margin-top: 2%;
+    }
+    .well{
+        margin-left: 40%;
+        margin-top: 2%;
+    }
+    .space__left{
+        width: 100%;
+    }
+    .space__right{
+        width: 50%;
+        margin-right: 25%;
+        margin-left:  25%;
+    }
+    .cafe__contents{
+        width: 50%;
+    }
+    .cafe__menu {
+        width: 40%;
+        float: left;
+
+    }
+    .cafe__price{
+        width: 50%;
+         margin-left: 50%;
+         padding-top: 15%;
+    }
+    .tab2{
+        top:15%;
+    }
+    .tab3{
+        top:25%;
+    }
+
+    .access__logo2 img{
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+    .access__logo2 {
+        display: block;
+    }
+    .map2{
+        justify-content: center;
+    }
+
+    .access__logo img{
+        width: 30%;
+        margin-left: 35%;
+        margin-right: 35%;
+    }
+    .access__logo {
+        display: block;
+    }
+    .map{
+        width: 100%;
+        justify-content: center;
+    }
+    .map img{
+        width: 50%;
+    }
+    .event__img{
+    float:none;    
+    width: 100%;
+    }
+
+    .event__content{
+        padding-left: 0%; 
+    }
+
+}
+
+@media(max-width: 600px){
+
+    .h2__title{
+        writing-mode: horizontal-tb;
+        float: none;
+        margin-left: 10%;
+        width: 80%;
+        font-size: 40px;
+        margin-bottom: 10%;
+    }
+    .finished__title{
+        writing-mode: horizontal-tb;
+        float: none;
+        margin-left: 10%;
+        width: 80%;
+        font-size: 40px;
+        margin-bottom: 10%;
+    }
+    .block{
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .block2{
+        width: 80%;
+        margin-left: 15%;
+        margin-right: 5%;
+    }
+    #top h1{
+        font-size: 100px;
+        line-height: 70px;
+    }
+
+    .top__logo{
+        height: 15%;
+    }
+
+    .header{
+        display: none !important;
+    }
+    .tabs{
+        width: 80%;
+        margin-left: 10%;
+    }
+    .tabs2{
+        width: 80%;
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+    .well{
+        margin-left: 65%;
+    }
+    .kikka{
+        margin-left: 65%;
+    }
+    .cafe__contents{
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    #nav-open{
+        display: inline-block;
+    }
+    .footer__left{
+        font-size: 12px;
+    }
+    .footer__right img{
+        height: 50px;
+    }
+}
+@media(max-width: 500px){
+    #top{
+        height: 80vh;
+    }
+    #top h1{
+        font-size: 70px;
+        line-height: 50px;
+    }
+    .top__logo{
+        height: 20%;
+        width: 50%;
+        margin-right: 25%;
+        margin-left: 25%;
+        margin-top: 15%;
+    }
+
+    .tab3{
+        top:25%;
+    }
+    .h2__title{
+        font-size: 30px;
+    }
+    .finished_title{
+        font-size: 30px;
+    }
+}
+@media(max-width: 500px){
+        .tab3{
+        top:30%;
+    }
+     .tab2{
+        top:10%;
+    }
+        .reserve{
+        width: 60%;
+        margin-right: 20%;
+        margin-left: 20%;
+    }
+    .cafe__logo img{
+        height: 50px;
+    }
+}
+@media(max-width: 400px){
+    #top h1{
+        font-size: 50px;
+        line-height: 35px;
+        padding-top: 30%;
+    }
+    .top__logo{
+        height: 10%;
+        width: 30%;
+        margin-right: 35%;
+        margin-left: 35%;
+        margin-top: 15%;
+    }
+    .flex2{
+        display: block;
+    }
+    .access__block{
+        width: 80%;
+        margin-right: 10%;
+        margin-left: 10%;
+        margin-bottom: 20%;
+    }
+    .cafe__price{
+        width: 20%;
+        margin-left: 80%;
+    }
+    .cafe__menu{
+        width: 80%;
+    }
+}

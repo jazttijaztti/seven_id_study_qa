@@ -29,6 +29,52 @@ class Eventmanager extends CI_Controller {
         }
 		$this->load->view('admin/event_create');
     }
+    
+    //イベントの登録
+    public function register(){
+
+        //postmの値を受け取る
+        $param['hotel_id']    = $this->input->post('hotel_id');
+        $param['eventdate']   = $this->input->post('eventdate');
+        $param['title']       = $this->input->post('title');
+        $param['link']        = $this->input->post('link');
+        $param['description'] = $this->input->post('description');
+
+        //外部リンクが設定されていたらリンク先にリダイレクトして飛ばしてしまう
+        if (!empty($link)) {
+            redirect($link);
+        }
+        $this->load->model('event_model');
+        $new_event_id = $this->event_model->insert($param);
+         //画像
+        $config['upload_path']   = 'uploads/event';
+        $config['allowed_types'] = 'gif|jpg|png';
+        $config['overwrite']     = TRUE; 
+        $this->load->library('upload');
+        $this->upload->initialize($config); 
+        if (!$this->upload->do_upload('event_img'))
+        {
+            $error = array('error' => $this->upload->display_errors());
+
+            $this->load->view('admin/event_create', $error);
+        }
+        else
+        {
+            $img_res = array('upload_data' => $this->upload->data());
+            if (!empty($img_res['upload_data']['orig_name'])){
+               $img_param['event_image'] = $img_res['upload_data']['orig_name'];
+               $img_param['event_id'] = $new_event_id;
+               $this->event_model->update_image($img_param);
+            }
+        }
+         //insertする
+         //完了
+         $this->load->view('admin_register');
+
+    }
+
+
+
 
 
 /*
