@@ -15,12 +15,6 @@ class Event extends CI_Controller {
         $this->load->model("Faq_model");
         $this->load->library('pagination');  
         $this->load->library('session');
-        $s_id = $this->session->userdata('s_id');
-        if (empty($s_id)) {
-            redirect('login/index');
-        }
-        $this->hobby    = $this->session->userdata('hobby');
-        $this->username = $this->session->userdata('username');
     }
 
     
