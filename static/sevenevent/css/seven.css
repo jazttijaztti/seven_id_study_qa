@@ -302,6 +302,7 @@ body {
 
 .flex{
     display: flex;
+    padding-bottom: 10%;
 }
 #system{
     clear: both;

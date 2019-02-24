@@ -128,7 +128,7 @@
             </div></a><!--finished__block-->
         </div><!--flex-->
 
-        <div class="flex margin">
+        <div class="flex">
             <a href=""><div class="finished__block">
                 <div class="well">
                     <p>well</p>
