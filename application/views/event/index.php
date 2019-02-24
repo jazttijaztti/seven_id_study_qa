@@ -31,12 +31,12 @@
         <div class="menu">
             <ul>
                 <li><a href="#top">TOP</a></li>
-                <li><a href="html/event.html">EVENT</a></li>
-                <li><a href="html/finished.html">FINISHED EVENT</a></li>
-                <li><a href="html/space.html">SPACE</a></li>
-                <li><a href="html/system.html">SYSTEM</a></li>
-                <li><a href="html/cafe.html">CAFE</a></li>
-                <li><a href="html/access.html">ACCESS</a></li>
+                <li><a href="#event">EVENT</a></li>
+                <li><a href="#finished">FINISHED EVENT</a></li>
+                <li><a href="#space">SPACE</a></li>
+                <li><a href="#system">SYSTEM</a></li>
+                <li><a href="#cafe">CAFE</a></li>
+                <li><a href="#access">ACCESS</a></li>
                 <li class="header__contact"><a href="">CONTACT</a></li>
         </div><!--menu-->
     </div><!--top-->
