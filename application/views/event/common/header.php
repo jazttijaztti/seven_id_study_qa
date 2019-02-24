@@ -6,13 +6,13 @@
 
         <h2>SEVEN PLACE</h2>
         <ul>
-            <li class="back1"><a href="../seven.html">TOP</a></li>
-            <li class="back1"><a href="event.html">EVENT</a></li>
-             <li><a href="finished.html">FINISHED EVENT</a></li>
-            <li class="back1"><a href="space.html">SPACE</a></li>
-            <li class="back1"><a href="system.html">SYSTEM</a></li>
-            <li class="back1"><a href="cafe.html">CAFE</a></li>
-            <li class="back1"><a href="access.html">ACCESS</a></li>
+            <li class="back1"><a href="#top">TOP</a></li>
+            <li class="back1"><a href="#event">EVENT</a></li>
+             <li><a href="#finished">FINISHED EVENT</a></li>
+            <li class="back1"><a href="#space">SPACE</a></li>
+            <li class="back1"><a href="#system">SYSTEM</a></li>
+            <li class="back1"><a href="#cafe">CAFE</a></li>
+            <li class="back1"><a href="#access">ACCESS</a></li>
             <a href=""><li class="back2" >CONTACT</li></a>
         </ul>
       </div>
@@ -21,12 +21,12 @@
 
     <div class="header">
         <ul>
-            <li class="back1"><a href="../seven.html">TOP</a></li>
-            <li class="back1"><a href="event.html">EVENT</a></li>
-            <li class="back1"><a href="space.html">SPACE</a></li>
-            <li class="back1"><a href="system.html">SYSTEM</a></li>
-            <li class="back1"><a href="cafe.html">CAFE</a></li>
-            <li class="back1"><a href="access.html">ACCESS</a></li>
+            <li class="back1"><a href="#top">TOP</a></li>
+            <li class="back1"><a href="#event">EVENT</a></li>
+            <li class="back1"><a href="#space">SPACE</a></li>
+            <li class="back1"><a href="#system">SYSTEM</a></li>
+            <li class="back1"><a href="#cafe">CAFE</a></li>
+            <li class="back1"><a href="#access">ACCESS</a></li>
             <a href=""><li class="back2" >CONTACT</li></a>
         </ul>
     </div><!--header-->
