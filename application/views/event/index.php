@@ -89,86 +89,60 @@
         </div><!--finished__title-->
 
         <div class="block2">
-            <div class="flex">
-            <a href=""><div class="finished__block">
+           <?php 
+              $count = count($event);
+           ?>
+           <?php foreach ($event as $key => $val) {  ?>
+           <?php if ($key%2==0) { ?>
+           <div class="flex">
+           <a href=""><div class="finished__block">
                 <div class="well">
                     <p>well</p>
                 </div><!--well-->
                 <div class="finished__block__block">
                     <div class="slider">
                         <img
-                         src="<?= base_url()?>static/sevenevent/img/finishdevent_photo.jpg">
+                         src="<?= base_url()?>uploads/event/<?= $val['image_name']?>">
                     </div><!--slider-->
-                    <h3>イベント名が入ります<br>
-                    イベント名が入ります</h3>
+                    <h3><?=$val['eventdate']; ?><br>
+                    <?= $val['title']; ?></h3>
                     <div class="finished__border">
                     </div><!--finished__border-->
                     <div class="finished__content">
-                        <p>イベントの簡単な説明が入ります。イベントの簡単な説明が入ります。イベントの簡単な説明が入ります。イベントの簡単な説明が入ります。イベントの簡単な説明が
-                        </p>
+                        <p><?= $val['description']; ?></p>
                     </div><!--finished__content-->
                 </div><!--finished__block__block-->
             </div></a><!--finished__block-->
-
-              <a href=""><div class="finished__block">
+            <?php $count = $count - 1 ; ?>
+            <?php } ?>
+            <?php if($key%2!=0) {  ?>
+            <a href=""><div class="finished__block">
                 <div class="kikka">
                     <p>kikka</p>
                 </div><!--kikka-->
                 <div class="finished__block__block">
-                    <img src="<?= base_url()?>static/sevenevent/img/finishdevent_photo.jpg">
-                    <h3>イベント名が入ります<br>
-                    イベント名が入ります</h3>
+                    <img src="<?= base_url()?>uploads/event/<?=$val['image_name']; ?>">
+                    <h3><?=$val['eventdate']; ?><br>
+                    <?=$val['title']; ?></h3>
                     <div class="finished__border">
                     </div><!--finished__border-->
                     <div class="finished__content">
-                        <p>イベントの簡単な説明が入ります。イベントの簡単な説明が入ります。イベントの簡単な説明が入ります。イベントの簡単な説明が入ります。イベントの簡単な説明が
-                        </p>
+                        <p><?=$val['description']; ?></p>
                     </div><!--finished__content-->
                 </div><!--finished__block__block-->
             </div></a><!--finished__block-->
+        <?php $count = $count -1 ;?>
+
+        <?php if ($count == 0 or $key%2!=0) {?>
         </div><!--flex-->
+        <?php } ?>
 
-        <div class="flex">
-            <a href=""><div class="finished__block">
-                <div class="well">
-                    <p>well</p>
-                </div><!--well-->
-                <div class="finished__block__block">
-                    <img src="<?= base_url()?>static/sevenevent/img/finishdevent_photo.jpg">
-                    <h3>イベント名が入ります<br>
-                    イベント名が入ります</h3>
-                    <div class="finished__border">
-                    </div><!--finished__border-->
-                    <div class="finished__content">
-                        <p>イベントの簡単な説明が入ります。イベントの簡単な説明が入ります。イベントの簡単な説明が入ります。イベントの簡単な説明が入ります。イベントの簡単な説明が
-                        </p>
-                    </div><!--finished__content-->
-                </div><!--finished__block__block-->
-            </div></a><!--finished__block-->
+        <?php } ?>
+        <?php } //foreachの閉じ括弧?>  
 
-            <a href=""><div class="finished__block">
-                <div class="kikka">
-                    <p>kikka</p>
-                </div><!--kikka-->
-                <div class="finished__block__block">
-                    <img src="<?= base_url()?>static/sevenevent/img/finishdevent_photo.jpg">
-                    <h3>イベント名が入ります<br>
-                    イベント名が入ります</h3>
-                    <div class="finished__border">
-                    </div><!--finished__border-->
-                    <div class="finished__content">
-                        <p>イベントの簡単な説明が入ります。イベントの簡単な説明が入ります。イベントの簡単な説明が入ります。イベントの簡単な説明が入ります。イベントの簡単な説明が
-                        </p>
-                    </div><!--finished__content-->
-                </div><!--finished__block__block-->
-            </div></a><!--finished__block-->
-            </div><!--flex-->
         </div><!--block-->
     </div><!--finished-->
     
-
-
-
     <div id="space">
         <div class="h2__title">
             <h2>SPACE</h2>
