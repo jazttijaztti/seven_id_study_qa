@@ -13,15 +13,26 @@ class Event extends CI_Controller {
         $this->load->helper('common');
         $this->load->library('form_validation');
         $this->load->model("Faq_model");
+        $this->load->model('Event_model');
         $this->load->library('pagination');  
         $this->load->library('session');
     }
 
     
-    public function index(){
+    public function index($page = 0){
          
-
-       $data['test'] = 'test';
+       $page_config['base_url'] = base_url('event/index');
+       $where['delete_flg'] = 0;
+       $page_config['total_rows'] = $this->Event_model->total_rows($where);
+       $page_config['per_page'] = 10;
+       $page_config['user_page_numbers'] = TRUE;
+       //一覧取得のためのパラメータをモデルに渡す
+       $param['limit'] = $page_config['per_page'];
+       $param['offset'] = $page;
+       $param['order_by'] = 'DESC';
+       $data['event'] = $this->Event_model->get_event($param);
+       $this->pagination->initialize($page_config);
+       $data['page_links'] = $this->pagination->create_links();
        //loading view
        $this->load->view('event/index',$data);
    }    

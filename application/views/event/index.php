@@ -43,64 +43,44 @@
 
 
 
-
+    
     <div id="event">
         <div class="h2__title">
             <h2>EVENT</h2>
         </div><!--h2__title-->
         <div class="block">
-            <a href=""><div class="event__block__contents">
-                <div class="event__img">
-                    <img src="<?= base_url()?>static/sevenevent/img/event_photo.jpg">
-                </div><!--event__img-->
-                <div class="event__content">
-                    <dic class="event__content1">
-                        <div class="day">
-                            <p>0.00</p>
-                        </div><!--day-->
-                        <div class="kikka__icon">
-                            <p>kikka</p>
-                        </div><!--kikka__icon-->
-                    </dic><!--event__content1-->
-                    <div class="event__content2">
-                        <h3>イベント名が入ります<br>イベント名が入ります</h3>
-                    </div><!--event__content2-->
-                    <div class="event__content3">
-                        <p>
-                        イベントの簡単な説明が入ります。イベントの簡単な説明が入ります。イベントの簡単な説明が入ります。イベントの簡単な説明が入ります。イベントの簡単な説明が入ります。イベントの簡単な説明が入ります。
-                    　　</p>
-                    </div><!--event__content3-->
-                </div><!--event__content-->
-            </div></a><!--event__block__contents-->
-
-            <a href=""><div class="event__block__contents2">
-                <div class="event__img">
-                    <img src="<?= base_url()?>static/sevenevent/img/event_photo.jpg">
-                </div><!--event__img-->
-                <div class="event__content">
-                    <dic class="event__content1">
-                        <div class="day">
-                            <p>0.00</p>
-                        </div><!--day-->
-                        <div class="well__icon">
-                            <p>well</p>
-                        </div><!--well__icon-->
-                    </dic><!--event__content1-->
-                    <div class="event__content2">
-                        <h3>イベント名が入ります<br>イベント名が入ります</h3>
-                    </div><!--event__content2-->
-                    <div class="event__content3">
-                        <p>
-                        イベントの簡単な説明が入ります。イベントの簡単な説明が入ります。イベントの簡単な説明が入ります。イベントの簡単な説明が入ります。イベントの簡単な説明が入ります。イベントの簡単な説明が入ります。
-                    　　</p>
-                    </div><!--event__content3-->
-                </div><!--event__content-->
-            </div></a><!--event__block__contents-->
-
+        <?php foreach ($event as $key => $val) {  ?>
+            <a href="">
+                <div class="event__block__contents">
+                    <div class="event__img">
+                        <img src="<?= show_event_images($val['image_name']); ?>">
+                    </div><!--event__img-->
+                    <div class="event__content">
+                        <div class="event__content1">
+                            <div class="day">
+                                <p><?= $val['eventdate'] ?></p>
+                            </div><!--day-->
+                            <div class="kikka__icon">
+                                <p><?= show_hotel_from_id($val['hotel_id']);?></p>
+                            </div><!--kikka__icon-->
+                        </div><!--event__content1-->
+                        <div class="event__content2">
+                            <h3><?= $val['title'] ?></h3>
+                        </div><!--event__content2-->
+                        <div class="event__content3">
+                            <p>
+                              <?= $val['description'] ?>
+                            </p>
+                        </div><!--event__content3-->
+                    </div><!--event__content-->
+                </div>
+            </a><!--event__block__contents-->
+        <?php } ?>
         </div><!--block-->
-    </div><!--event-->
-
-
+        <div class="page_links">
+            <?= $page_links  ?>
+        </div>
+    </div><!--event--> 
 
 
     <div id="finished">

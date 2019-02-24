@@ -58,6 +58,15 @@ function show_header($param = false){
   $CI->load->view('event/common/header');
 }
 
-
+//イベント画像が登録されているかチェックする
+function show_event_images($param){
+  if($param == ''){
+    $res = base_url('static/sevenevent/img/event_photo.jpg');
+    return $res;
+  }else{
+    $res = base_url('uploads/event/' . $param);
+    return $res;
+  }
+}
 
 ?>

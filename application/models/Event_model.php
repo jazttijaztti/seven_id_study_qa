@@ -30,5 +30,43 @@ class event_model extends CI_Model {
             $ret = $this->db->update('event');
             return $ret;
         }
+
+        public function get_event($param){
+            $limit = 10;
+            $offset = 0;
+            $order_by = 'DESC';
+
+            if(!empty($param['limit'])){
+                $limit = $param['limit'];
+                $this->db->limit($limit);
+            }
+
+            if(!empty($param['offset'])){
+                $offset = $param['offset'];
+                $this->db->offset($offset);
+            }
+
+            if(!empty($param['order_by'])){
+                $order_by = $param['order_by'];
+                $this->db->order_by('id', $order_by);
+            }
+
+
+            $where_array['delete_flg'] = 0;
+            $this->db->select('*')->from('event');
+            $this->db->where($where_array);
+            $res = $this->db->get()->result_array();
+            
+            return $res;
+        }
+
+        public function total_rows($where){
+            $this->db->where($where);
+            $this->db->select('COUNT(*) as count');
+            $this->db->from('event');
+            $query = $this->db->get();
+            $count = $query->row_array()['count'];
+            return $count;
+        }
 }
 
