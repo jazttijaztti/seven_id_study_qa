@@ -50,7 +50,7 @@
         </div><!--h2__title-->
         <div class="block">
         <?php foreach ($event as $key => $val) {  ?>
-            <a href="">
+            <a href="<?= $val['link'] ?>">
                 <div class="event__block__contents">
                     <div class="event__img">
                         <img src="<?= show_event_images($val['image_name']); ?>">
@@ -95,9 +95,9 @@
            <?php foreach ($event as $key => $val) {  ?>
            <?php if ($key%2==0) { ?>
            <div class="flex">
-           <a href=""><div class="finished__block">
+           <a href="<?= $val['link'] ?>"><div class="finished__block">
                 <div class="well">
-                    <p>well</p>
+                    <p><?= show_hotel_from_id($val['hotel_id']); ?></p>
                 </div><!--well-->
                 <div class="finished__block__block">
                     <div class="slider">
@@ -118,7 +118,7 @@
             <?php if($key%2!=0) {  ?>
             <a href=""><div class="finished__block">
                 <div class="kikka">
-                    <p>kikka</p>
+                    <p><?= show_hotel_from_id($val['hotel_id']); ?></p>
                 </div><!--kikka-->
                 <div class="finished__block__block">
                     <img src="<?= base_url()?>uploads/event/<?=$val['image_name']; ?>">
