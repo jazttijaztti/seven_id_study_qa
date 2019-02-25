@@ -200,7 +200,8 @@ body {
 }
 
 .finished__block{
-    width: 90%;
+    width: 50%;
+    float: left;
 }
 .finished__block__block{
     width: 95%;
@@ -257,6 +258,7 @@ body {
 
 .block2 img{
     width: 100%;
+    height: 25vh;
 }
 
 #space{

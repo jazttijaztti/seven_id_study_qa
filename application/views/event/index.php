@@ -94,7 +94,7 @@
            ?>
            <?php foreach ($finished_event as $key => $val) {  ?>
            <?php if ($key%2==0) { ?>
-           <div class="flex">
+           <div>
            <a href="<?= $val['link'] ?>"><div class="finished__block">
                 <div class="well">
                     <p><?= show_hotel_from_id($val['hotel_id']); ?></p>
