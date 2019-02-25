@@ -31,6 +31,7 @@ class Event extends CI_Controller {
        $param['offset'] = $page;
        $param['order_by'] = 'DESC';
        $data['event'] = $this->Event_model->get_event($param);
+       $data['finished_event'] = $this->Event_model->get_finished_event();
        $this->pagination->initialize($page_config);
        $data['page_links'] = $this->pagination->create_links();
        //loading view

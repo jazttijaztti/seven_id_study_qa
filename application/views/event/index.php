@@ -90,9 +90,9 @@
 
         <div class="block2">
            <?php 
-              $count = count($event);
+              $count = count($finished_event);
            ?>
-           <?php foreach ($event as $key => $val) {  ?>
+           <?php foreach ($finished_event as $key => $val) {  ?>
            <?php if ($key%2==0) { ?>
            <div class="flex">
            <a href="<?= $val['link'] ?>"><div class="finished__block">
