@@ -101,8 +101,7 @@
                 </div><!--well-->
                 <div class="finished__block__block">
                     <div class="slider">
-                        <img
-                         src="<?= base_url()?>uploads/event/<?= $val['image_name']?>">
+                        <img src="<?= show_event_images($val['image_name']); ?>">
                     </div><!--slider-->
                     <h3><?=$val['eventdate']; ?><br>
                     <?= $val['title']; ?></h3>
@@ -121,7 +120,7 @@
                     <p><?= show_hotel_from_id($val['hotel_id']); ?></p>
                 </div><!--kikka-->
                 <div class="finished__block__block">
-                    <img src="<?= base_url()?>uploads/event/<?=$val['image_name']; ?>">
+                    <img src="<?= show_event_images($val['image_name']); ?>">
                     <h3><?=$val['eventdate']; ?><br>
                     <?=$val['title']; ?></h3>
                     <div class="finished__border">

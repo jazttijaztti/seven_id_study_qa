@@ -18,9 +18,9 @@ function show_hotel_from_id($hotel_id) {
        return "KIKKA";
 
     }elseif ($hotel_id == "2") {
-       return "VINTAGE";
+       return "well";
     } elseif ($hotel_id == "3"){
-       return "セブンガーデン 浅草";
+       return "vintage";
     } else {
        return "^ ^b";
     }
@@ -60,7 +60,7 @@ function show_header($param = false){
 
 //イベント画像が登録されているかチェックする
 function show_event_images($param){
-  if($param == ''){
+  if(empty($param)){
     $res = base_url('static/sevenevent/img/event_photo.jpg');
     return $res;
   }else{
