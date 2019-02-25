@@ -65,6 +65,15 @@ class Eventmanager extends CI_Controller {
                $img_param['event_image'] = $img_res['upload_data']['orig_name'];
                $img_param['event_id'] = $new_event_id;
                $this->event_model->update_image($img_param);
+               $config_resize['image_library'] = 'gd2';
+               $config_resize['source_image']	= 'uploads/event'.$img_res['upload_data']['orig_name'];
+               $config_resize['create_thumb'] = TRUE;
+               $config_resize['maintain_ratio'] = TRUE;
+               $config_resize['width']  = 296;
+               $config_resize['height'] = 218;
+
+               $this->load->library('image_lib', $config_resize); 
+               $this->image_lib->resize();
             }
         }
          //insertする
