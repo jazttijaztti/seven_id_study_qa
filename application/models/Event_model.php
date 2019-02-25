@@ -53,11 +53,22 @@ class event_model extends CI_Model {
 
 
             $where_array['delete_flg'] = 0;
+            $where_array['finished_flg'] = 0;
             $this->db->select('*')->from('event');
             $this->db->where($where_array);
             $res = $this->db->get()->result_array();
             
             return $res;
+        }
+
+        public function get_finished_event(){
+            $where_finished['finished_flg'] = 1;
+            $this->db->select('*')->from('event');
+            $this->db->where($where_finished);
+
+            $res = $this->db->get()->result_array();
+            return $res;
+
         }
 
         public function total_rows($where){
