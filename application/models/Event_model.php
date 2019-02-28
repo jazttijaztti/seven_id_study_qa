@@ -65,7 +65,7 @@ class event_model extends CI_Model {
             $where_finished['finished_flg'] = 1;
             $this->db->select('*')->from('event');
             $this->db->where($where_finished);
-
+            $this->db->order_by('id', 'DESC');
             $res = $this->db->get()->result_array();
             return $res;
 
