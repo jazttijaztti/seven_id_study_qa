@@ -23,7 +23,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://seven_event.com';
+$prot = 'http://';
+if (!empty($_SERVER['HTTPS'])) {
+    $prot = 'https://';
+}
+
+$config['base_url'] = $prot . $_SERVER['HTTP_HOST'] ;
+
 
 /*
 |--------------------------------------------------------------------------

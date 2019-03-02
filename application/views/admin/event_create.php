@@ -16,10 +16,12 @@
 タイトル<input type="text" name="title"><br>
 外部リンク<input type="text" name="link"><br>
 説明<input type="text" name="description"><br>
-画像<input type="file" name="event_img">
+画像<input type="file" name="event_img_1">
+画像<input type="file" name="event_img_2">
+画像<input type="file" name="event_img_3">
 <br>
 <input type="submit" value="送信">
 <?= form_close() ?>
-
+<?  $error ? var_dump($error):'' ;//if省略系でエラーのデフォ値?>
 </body>
 </html>

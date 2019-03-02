@@ -24,10 +24,11 @@ class Eventmanager extends CI_Controller {
     
     //イベントの入力画面
     public function create(){
+        $data['error'] = "";
         if ($this->permission_status != 1) {
-           redirect('qa/index');
+           redirect('qa/index', $data);
         }
-		$this->load->view('admin/event_create');
+		$this->load->view('admin/event_create',$data);
     }
     
     //イベントの登録
@@ -47,38 +48,47 @@ class Eventmanager extends CI_Controller {
         $this->load->model('event_model');
         $new_event_id = $this->event_model->insert($param);
          //画像
-        $config['upload_path']   = 'uploads/event';
-        $config['allowed_types'] = 'gif|jpg|png';
-        $config['overwrite']     = TRUE; 
         $this->load->library('upload');
-        $this->upload->initialize($config); 
-        if (!$this->upload->do_upload('event_img'))
-        {
-            $error = array('error' => $this->upload->display_errors());
 
+        //エラーの初期化
+        $error_flg = 0;
+
+        //htmlの画像は$_FILESに入ってくるのでforeachで回しながらアップロードする
+        foreach ($_FILES as $file_form_name => $val) {
+
+            //画像nameがないときは画像がセットされていないから通過できないようにする
+            if (!empty($val['name'])) {
+
+            $config['upload_path']   = 'uploads/event';
+            $config['allowed_types'] = 'gif|jpg|png';
+            $config['overwrite']     = TRUE; 
+            //アップする名前をfine_nameで強制的に変更する
+            $config['file_name']     = 'id_'.$new_event_id.'_'.$file_form_name;; 
+            $this->upload->initialize($config);
+                    if (!$this->upload->do_upload($file_form_name))
+                    {
+                        $error['error'][] = array('error' => $this->upload->display_errors());
+                        $error_flg = 1;
+                    }
+                    else
+                    {
+                        //画像のアップロード実行
+                        $img_res = array('upload_data' => $this->upload->data());
+                        if (!empty($img_res['upload_data']['orig_name'])){
+                            $img_param['event_image'] = 'id_'.$new_event_id.'_'.$file_form_name;
+                            $img_param['event_id'] = $new_event_id;
+                            //アップロードファイルの名前を変更する
+                            $this->event_model->update_image($img_param);
+                         }
+                    }
+             }
+        }
+        if ($error_flg) {
             $this->load->view('admin/event_create', $error);
         }
-        else
-        {
-            $img_res = array('upload_data' => $this->upload->data());
-            if (!empty($img_res['upload_data']['orig_name'])){
-               $img_param['event_image'] = $img_res['upload_data']['orig_name'];
-               $img_param['event_id'] = $new_event_id;
-               $this->event_model->update_image($img_param);
-               $config_resize['image_library'] = 'gd2';
-               $config_resize['source_image']	= 'uploads/event'.$img_res['upload_data']['orig_name'];
-               $config_resize['create_thumb'] = TRUE;
-               $config_resize['maintain_ratio'] = TRUE;
-               $config_resize['width']  = 296;
-               $config_resize['height'] = 218;
-
-               $this->load->library('image_lib', $config_resize); 
-               $this->image_lib->resize();
-            }
-        }
-         //insertする
+         
          //完了
-         $this->load->view('admin_register');
+        $this->load->view('admin_register');
 
     }
 
