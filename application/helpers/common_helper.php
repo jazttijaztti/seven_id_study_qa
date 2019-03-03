@@ -64,7 +64,7 @@ function show_event_images($param){
     $res = base_url('static/sevenevent/img/event_photo.jpg');
     return $res;
   }else{
-    $res = base_url('uploads/event/' . $param);
+    $res = base_url('uploads/event/' . $param );
     return $res;
   }
 }

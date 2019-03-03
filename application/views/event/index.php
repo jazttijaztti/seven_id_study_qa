@@ -58,7 +58,7 @@
 
 
 
-    <div id="top" style="background: url(../../../static/sevenevent/img/sample_pic.jpg) center center no-repeat;background-size: cover;">
+    <div id="top" style="background: url(<?= base_url('static/sevenevent/img/sample_pic.jpg')?> ) center center no-repeat;background-size: cover;">
 <!--         <h1>SEVEN<br>PLACE</h1> -->
 				<div class="top__main">
 					<h1 class="top__title">
