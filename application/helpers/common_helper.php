@@ -69,4 +69,14 @@ function show_event_images($param){
   }
 }
 
+function show_event_link($param){
+  if(empty($param)){
+    $res = '#';
+    return $res;
+  }else{
+    $res = $param;
+    return $res;
+  }
+}
+
 ?>

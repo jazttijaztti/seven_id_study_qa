@@ -91,7 +91,7 @@
         </div><!--h2__title-->
         <div class="block">
         <?php foreach ($event as $key => $val){ ?>
-            <a href="<?= $val['link'] ?>">
+            <a href="<?= show_event_link($val['link']); ?>">
 	            <div class="event__block__contents clearfix">
                 <div class="event__img">
 	                	<div style="background: url(<?= show_event_images($val['image_name']); ?>) center center no-repeat;background-size: cover;" class="event__img_pic"></div>
@@ -132,20 +132,20 @@
         <div class="finished__block">
 	        <ul class="finished__list">   
                 <?php foreach ($finished_event as $key => $val) { ?>
-                <?php if($key%2 == 0 || $key == 0) { ?>  
+                <?php if($key%2 == 0 || $key == 0) { ?>
 		        <li class="finished__contents">
 		        	<div class="well">
 	              <p><?= show_hotel_from_id($val['hotel_id']) ?></p>
 	            </div>
 	            <ul class="finished__pic_list Flist01">
 		            <li class="finished__pic_item">
-		            	<a href="" class="finished__pic_link" style="background: url(<?= show_event_images($val['image_name']); ?>) center center no-repeat;background-size: cover;"></a>
+		            	<a href="<?= show_event_link($val['link']); ?>" class="finished__pic_link" style="background: url(<?= show_event_images($val['image_name']); ?>) center center no-repeat;background-size: cover;"></a>
                     </li>
 		            <li class="finished__pic_item">
-		            	<a href="" class="finished__pic_link" style="background: url(<?= show_event_images($val['image_name']); ?>) center center no-repeat;background-size: cover;"></a>
+		            	<a href="<?= show_event_link($val['link']); ?>" class="finished__pic_link" style="background: url(<?= show_event_images($val['image_name']); ?>) center center no-repeat;background-size: cover;"></a>
 		            </li>
 		            <li class="finished__pic_item">
-		            	<a href="" class="finished__pic_link" style="background: url(<?= show_event_images($val['image_name']); ?>) center center no-repeat;background-size: cover;"></a>
+		            	<a href="<?= show_event_link($val['link']); ?>" class="finished__pic_link" style="background: url(<?= show_event_images($val['image_name']); ?>) center center no-repeat;background-size: cover;"></a>
 		            </li>
 	            </ul>
 	            <a href="" class="finished__link">
@@ -168,13 +168,13 @@
               </div>
 	            <ul class="finished__pic_list Flist02">
 		            <li class="finished__pic_item">
-		            	<a href="" class="finished__pic_link" style="background: url(<?= show_event_images($val['image_name']); ?>) center center no-repeat;background-size: cover;"></a>
+		            	<a href="<?= show_event_link($val['link']); ?>" class="finished__pic_link" style="background: url(<?= show_event_images($val['image_name']); ?>) center center no-repeat;background-size: cover;"></a>
 		            </li>
 		            <li class="finished__pic_item">
-		            	<a href="" class="finished__pic_link" style="background: url(<?= show_event_images($val['image_name']); ?>) center center no-repeat;background-size: cover;"></a>
+		            	<a href="<?= show_event_link($val['link']); ?>" class="finished__pic_link" style="background: url(<?= show_event_images($val['image_name']); ?>) center center no-repeat;background-size: cover;"></a>
 		            </li>
 		            <li class="finished__pic_item">
-		            	<a href="" class="finished__pic_link" style="background: url(<?= show_event_images($val['image_name']); ?>) center center no-repeat;background-size: cover;"></a>
+		            	<a href="<?= show_event_link($val['link']);  ?>" class="finished__pic_link" style="background: url(<?= show_event_images($val['image_name']); ?>) center center no-repeat;background-size: cover;"></a>
 		            </li>
 	            </ul>
 	            <a href="" class="finished__link">
