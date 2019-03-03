@@ -52,7 +52,6 @@ class Eventmanager extends CI_Controller {
 
         //エラーの初期化
         $error_flg = 0;
-
         //htmlの画像は$_FILESに入ってくるのでforeachで回しながらアップロードする
         foreach ($_FILES as $file_form_name => $val) {
 
@@ -60,11 +59,13 @@ class Eventmanager extends CI_Controller {
             if (!empty($val['name'])) {
 
             $config['upload_path']   = 'uploads/event';
-            $config['allowed_types'] = 'gif|jpg|png';
+            $config['allowed_types'] = 'gif|jpg|png|jpeg';
             $config['overwrite']     = TRUE; 
+            $type= str_replace('image/', '.' ,$val['type']);
             //アップする名前をfine_nameで強制的に変更する
-            $config['file_name']     = 'id_'.$new_event_id.'_'.$file_form_name;; 
+            $config['file_name']     = 'id_'.$new_event_id.'_'.$file_form_name . $type; 
             $this->upload->initialize($config);
+            
                     if (!$this->upload->do_upload($file_form_name))
                     {
                         $error['error'][] = array('error' => $this->upload->display_errors());
@@ -75,7 +76,7 @@ class Eventmanager extends CI_Controller {
                         //画像のアップロード実行
                         $img_res = array('upload_data' => $this->upload->data());
                         if (!empty($img_res['upload_data']['orig_name'])){
-                            $img_param['event_image'] = 'id_'.$new_event_id.'_'.$file_form_name;
+                            $img_param['event_image'] = 'id_'.$new_event_id.'_'.$file_form_name . $type;
                             $img_param['event_id'] = $new_event_id;
                             //アップロードファイルの名前を変更する
                             $this->event_model->update_image($img_param);
