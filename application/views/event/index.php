@@ -31,12 +31,12 @@
         <h2>SEVEN PLACE</h2>
         <ul>
             <li class="back1"><a href="#top">TOP</a></li>
-            <li class="back1"><a href="html/event.html">EVENT</a></li>
-             <li><a href="html/finished.html">FINISHED EVENT</a></li>
-            <li class="back1"><a href="html/space.html">SPACE</a></li>
-            <li class="back1"><a href="html/system.html">SYSTEM</a></li>
-            <li class="back1"><a href="html/cafe.html">CAFE</a></li>
-            <li class="back1"><a href="html/access.html">ACCESS</a></li>
+            <li class="back1"><a href="#event">EVENT</a></li>
+            <li><a href="#finished">FINISHED EVENT</a></li>
+            <li class="back1"><a href="#space">SPACE</a></li>
+            <li class="back1"><a href="#system">SYSTEM</a></li>
+            <li class="back1"><a href="#cafe">CAFE</a></li>
+            <li class="back1"><a href="#access">ACCESS</a></li>
             <a href=""><li class="back2" >CONTACT</li></a>
         </ul>
       </div>
@@ -46,11 +46,11 @@
     <div class="header">
         <ul>
             <li><a href="#top">TOP</a></li>
-            <li><a href="html/event.html">EVENT</a></li>
-            <li><a href="html/space.html">SPACE</a></li>
-            <li><a href="html/system.html">SYSTEM</a></li>
-            <li><a href="html/cafe.html">CAFE</a></li>
-            <li><a href="html/access.html">ACCESS</a></li>
+            <li><a href="#event">EVENT</a></li>
+            <li><a href="#space">SPACE</a></li>
+            <li><a href="#system">SYSTEM</a></li>
+            <li><a href="#cafe">CAFE</a></li>
+            <li><a href="#access">ACCESS</a></li>
             <a href=""><li class="header__contact">CONTACT</li></a>
         </ul>
     </div><!--header-->
@@ -62,7 +62,7 @@
 <!--         <h1>SEVEN<br>PLACE</h1> -->
 				<div class="top__main">
 					<h1 class="top__title">
-						<img src="img/logo_place.png">
+						<img src="<?= base_url('static/sevenevent/img/logo_place.png') ?>">
 					</h1>
 	        <div class="top__logo">
 	          <a href=""><img src="<?= base_url('static/sevenevent/img/logo_kikka.png') ?>"></a>
@@ -72,12 +72,12 @@
         <div class="menu">
             <ul>
                 <li><a href="#top">TOP</a></li>
-                <li><a href="html/event.html">EVENT</a></li>
-                <li><a href="html/finished.html">FINISHED EVENT</a></li>
-                <li><a href="html/space.html">SPACE</a></li>
-                <li><a href="html/system.html">SYSTEM</a></li>
-                <li><a href="html/cafe.html">CAFE</a></li>
-                <li><a href="html/access.html">ACCESS</a></li>
+                <li><a href="#event">EVENT</a></li>
+                <li><a href="#finished">FINISHED EVENT</a></li>
+                <li><a href="#space">SPACE</a></li>
+                <li><a href="#system">SYSTEM</a></li>
+                <li><a href="#cafe">CAFE</a></li>
+                <li><a href="#access">ACCESS</a></li>
                 <li class="header__contact"><a href="">CONTACT</a></li>
         </div><!--menu-->
     </div><!--top-->
@@ -94,7 +94,7 @@
             <a href="<?= $val['link'] ?>">
 	            <div class="event__block__contents clearfix">
                 <div class="event__img">
-	                	<div style="background: url(<?= show_event_images($val['image_name']) ?>) center center no-repeat;background-size: cover;" class="event__img_pic"></div>
+	                	<div style="background: url(<?= show_event_images($val['image_name']); ?>) center center no-repeat;background-size: cover;" class="event__img_pic"></div>
                 </div><!--event__img-->
                 <div class="event__content">
                     <div class="event__content1">
@@ -128,11 +128,9 @@
         <div class="finished__title">
             <h2>FINISHED EVENT</h2>
         </div><!--finished__title-->
-
         <?php $count = count($finished_event);  ?>
-        
         <div class="finished__block">
-	        <ul class="finished__list">    
+	        <ul class="finished__list">   
                 <?php foreach ($finished_event as $key => $val) { ?>
                 <?php if($key%2 == 0 || $key == 0) { ?>  
 		        <li class="finished__contents">
@@ -141,13 +139,13 @@
 	            </div>
 	            <ul class="finished__pic_list Flist01">
 		            <li class="finished__pic_item">
-		            	<a href="" class="finished__pic_link" style="background: url(<?= show_event_images($val['image_name']) ?>) center center no-repeat;background-size: cover;"></a>
+		            	<a href="" class="finished__pic_link" style="background: url(<?= show_event_images($val['image_name']); ?>) center center no-repeat;background-size: cover;"></a>
+                    </li>
+		            <li class="finished__pic_item">
+		            	<a href="" class="finished__pic_link" style="background: url(<?= show_event_images($val['image_name']); ?>) center center no-repeat;background-size: cover;"></a>
 		            </li>
 		            <li class="finished__pic_item">
-		            	<a href="" class="finished__pic_link" style="background: url(img/finishdevent_photo.jpg) center center no-repeat;background-size: cover;"></a>
-		            </li>
-		            <li class="finished__pic_item">
-		            	<a href="" class="finished__pic_link" style="background: url(img/finishdevent_photo.jpg) center center no-repeat;background-size: cover;"></a>
+		            	<a href="" class="finished__pic_link" style="background: url(<?= show_event_images($val['image_name']); ?>) center center no-repeat;background-size: cover;"></a>
 		            </li>
 	            </ul>
 	            <a href="" class="finished__link">
@@ -173,10 +171,10 @@
 		            	<a href="" class="finished__pic_link" style="background: url(<?= show_event_images($val['image_name']); ?>) center center no-repeat;background-size: cover;"></a>
 		            </li>
 		            <li class="finished__pic_item">
-		            	<a href="" class="finished__pic_link" style="background: url(img/finishdevent_photo.jpg) center center no-repeat;background-size: cover;"></a>
+		            	<a href="" class="finished__pic_link" style="background: url(<?= show_event_images($val['image_name']); ?>) center center no-repeat;background-size: cover;"></a>
 		            </li>
 		            <li class="finished__pic_item">
-		            	<a href="" class="finished__pic_link" style="background: url(img/finishdevent_photo.jpg) center center no-repeat;background-size: cover;"></a>
+		            	<a href="" class="finished__pic_link" style="background: url(<?= show_event_images($val['image_name']); ?>) center center no-repeat;background-size: cover;"></a>
 		            </li>
 	            </ul>
 	            <a href="" class="finished__link">

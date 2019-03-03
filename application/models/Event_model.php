@@ -79,5 +79,9 @@ class event_model extends CI_Model {
             $count = $query->row_array()['count'];
             return $count;
         }
+
+        public function get_image_name(){
+          
+        }
 }
 

@@ -26,7 +26,7 @@ class Eventmanager extends CI_Controller {
     public function create(){
         $data['error'] = "";
         if ($this->permission_status != 1) {
-           redirect('qa/index', $data);
+           redirect('event/index', $data);
         }
 		$this->load->view('admin/event_create',$data);
     }
