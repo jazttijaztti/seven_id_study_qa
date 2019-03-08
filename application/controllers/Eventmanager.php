@@ -12,7 +12,7 @@ class Eventmanager extends CI_Controller {
         $this->load->helper('common');
         $this->load->library('form_validation');
         $this->load->model("Admin_model");
-        $this->load->library('pagination');  
+        $this->load->library('pagination');
         $this->load->library('session');
         $s_id = $this->session->userdata('s_id');
         $this->permission_status = $this->session->userdata('permission_status');
@@ -21,7 +21,7 @@ class Eventmanager extends CI_Controller {
         }
     }
 
-    
+
     //イベントの入力画面
     public function create(){
         $data['error'] = "";
@@ -30,7 +30,7 @@ class Eventmanager extends CI_Controller {
         }
 		$this->load->view('admin/event_create',$data);
     }
-    
+
     //イベントの登録
     public function register(){
 
@@ -60,12 +60,12 @@ class Eventmanager extends CI_Controller {
 
             $config['upload_path']   = 'uploads/event';
             $config['allowed_types'] = 'gif|jpg|png|jpeg';
-            $config['overwrite']     = TRUE; 
+            $config['overwrite']     = TRUE;
             $type= str_replace('image/', '.' ,$val['type']);
             //アップする名前をfine_nameで強制的に変更する
-            $config['file_name']     = 'id_'.$new_event_id.'_'.$file_form_name . $type; 
+            $config['file_name']     = 'id_'.$new_event_id.'_'.$file_form_name . $type;
             $this->upload->initialize($config);
-            
+
                     if (!$this->upload->do_upload($file_form_name))
                     {
                         $error['error'][] = array('error' => $this->upload->display_errors());
@@ -87,7 +87,7 @@ class Eventmanager extends CI_Controller {
         if ($error_flg) {
             $this->load->view('admin/event_create', $error);
         }
-         
+
          //完了
         $this->load->view('admin_register');
 
@@ -143,11 +143,11 @@ class Eventmanager extends CI_Controller {
     public function detail($id) {
         $param["id"] = $id;
         $res = $this->Admin_model->get_admin($param);
-        
+
         $data = $res[0];
         if (!empty($res[0])) {
            $data = $res[0];
-           $this->load->view('admin_detail',$data); 
+           $this->load->view('admin_detail',$data);
         } else {
            redirect('admin/index');
            exit;
@@ -158,7 +158,7 @@ class Eventmanager extends CI_Controller {
     public function edit($id) {
         $param["id"] = $id;
         $res = $this->Admin_model->get_admin($param);
-        
+
         if (!empty($res[0])) {
            $data = $res[0];
            $this->load->view('admin_edit',$data);
@@ -168,7 +168,7 @@ class Eventmanager extends CI_Controller {
         }
 
     }
-    
+
     //QAの更新処理
     public function update(){
            $data['username'] = $this->input->post('username');
@@ -202,7 +202,7 @@ class Eventmanager extends CI_Controller {
 
         //viewに値を渡します.
 		$this->load->view('admin_index',$data);
-      
+
    }
 */
 }

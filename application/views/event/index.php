@@ -303,26 +303,32 @@
             <div class="tab2-content tab2-1-content">
                 <ul class="space__slider">
 	                <li>
-	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/system_dummy.jpg) center center no-repeat;background-size: cover;"></div>
+	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/mocihkomi0305.jpeg) center center no-repeat;background-size: 99% 350px;"></div>
 	                </li>
 	                <li>
-	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/system_dummy.jpg) center center no-repeat;background-size: cover;"></div>
+	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/mocihkomi03052.jpeg) center center no-repeat;background-size: 99% 350px;"></div>
 	                </li>
 	                <li>
-	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/system_dummy.jpg) center center no-repeat;background-size: cover;"></div>
+	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/mocihkomi03053.jpeg) center center no-repeat;background-size: 99% 350px;"></div>
+	                </li>
+	                <li>
+	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/mocihkomi03054.jpeg) center center no-repeat;background-size: 99% 350px;"></div>
 	                </li>
                 </ul><!--space__slider-->
             </div>
             <div class="tab2-content tab2-2-content">
                 <ul class="space__slider2">
 	                <li>
-	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/system_dummy.jpg) center center no-repeat;background-size: cover;"></div>
+	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/KIKKA_event0304_13.png) center center no-repeat;background-size: 99% 350px;"></div>
 	                </li>
 	                <li>
-	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/system_dummy.jpg) center center no-repeat;background-size: cover;"></div>
+	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/KIKKA_event0304_14.png) center center no-repeat;background-size: 99% 350px;"></div>
 	                </li>
 	                <li>
-	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/system_dummy.jpg) center center no-repeat;background-size: cover;"></div>
+	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/KIKKA_event0304_15.png) center center no-repeat;background-size: cover;"></div>
+	                </li>
+	                <li>
+	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/KIKKA_event0304_16.png) center center no-repeat;background-size: 99% 350px;"></div>
 	                </li>
                 </ul><!--space__slider-->
             </div><!--tab2-content-->
