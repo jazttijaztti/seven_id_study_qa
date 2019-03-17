@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+$lp:		'#{lp1}';
+
+$max_w: 1280px;
+
+$black: #171411;
+
+$font_En: "Roboto Slab" , Garamond , "Times New Roman" , "游明朝" , "Yu Mincho" , "游明朝体" , "YuMincho" , "ヒラギノ明朝 Pro W3" , "Hiragino Mincho Pro" , "HiraMinProN-W3" , "HGS明朝E" , "ＭＳ Ｐ明朝" , "MS PMincho" , serif;
+
+@import '_common.scss';
+@import '_base.scss';
+@import 'animate/_animate.scss';
+

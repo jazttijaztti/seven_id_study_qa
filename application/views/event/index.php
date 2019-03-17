@@ -207,13 +207,34 @@
             <div class="tab-content tab-1-content">
                 <ul class="space__slider">
 	                <li>
-	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/space_photo.jpg) center center no-repeat;background-size: cover;"></div>
+	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/space_photo/well/wel_eve1.jpg) center center no-repeat;background-size: cover;"></div>
 	                </li>
 	                <li>
-	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/space_photo.jpg) center center no-repeat;background-size: cover;"></div>
+	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/space_photo/well/wel_eve2.jpg) center center no-repeat;background-size: cover;"></div>
 	                </li>
 	                <li>
-	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/space_photo.jpg) center center no-repeat;background-size: cover;"></div>
+	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/space_photo/well/wel_eve3.jpg) center center no-repeat;background-size: cover;"></div>
+	                </li>
+	                <li>
+	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/space_photo/well/wel_eve4.jpg) center center no-repeat;background-size: cover;"></div>
+	                </li>
+	                <li>
+	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/space_photo/well/wel_eve5.jpg) center center no-repeat;background-size: cover;"></div>
+	                </li>
+	                <li>
+	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/space_photo/well/wel_eve6.jpg) center center no-repeat;background-size: cover;"></div>
+	                </li>
+	                <li>
+	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/space_photo/well/wel_eve7.jpg) center center no-repeat;background-size: cover;"></div>
+	                </li>
+	                <li>
+	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/space_photo/well/wel_eve8.jpg) center center no-repeat;background-size: cover;"></div>
+	                </li>
+	                <li>
+	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/space_photo/well/wel_eve9.jpg) center center no-repeat;background-size: cover;"></div>
+	                </li>
+	                <li>
+	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/space_photo/well/wel_eve10.jpg) center center no-repeat;background-size: cover;"></div>
 	                </li>
                 </ul><!--space__slider-->
                 <div class="flex">
@@ -240,20 +261,41 @@
                         </div><!--space__left__content2-->
                     </div><!--spsce__left-->
                     <div class="space__right">
-                        <img src="img/floor_well.png" alt="">
+                        <img src="../../static/sevenevent/img/floor_well_slice/floor_well.png" alt="">
                     </div><!--space__right-->
                 </div><!--flex-->
             </div>
             <div class="tab-content tab-2-content">
                 <ul class="space__slider2">
 	                <li>
-	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/1.jpg) center center no-repeat;background-size: cover;"></div>
+	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/space_photo/kikka/kikka_B1F_eve1.jpg) center center no-repeat;background-size: cover;"></div>
 	                </li>
 	                <li>
-                		<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/1.jpg) center center no-repeat;background-size: cover;"></div>
+                		<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/space_photo/kikka/kikka_B1F_eve2.jpg) center center no-repeat;background-size: cover;"></div>
 	                </li>
 	                <li>
-                		<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/1.jpg) center center no-repeat;background-size: cover;"></div>
+                		<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/space_photo/kikka/kikka_B1F_eve3.jpg) center center no-repeat;background-size: cover;"></div>
+	                </li>
+	                <li>
+	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/space_photo/kikka/kikka_B1F_eve4.jpg) center center no-repeat;background-size: cover;"></div>
+	                </li>
+	                <li>
+	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/space_photo/kikka/kikka_B1F_eve5.jpg) center center no-repeat;background-size: cover;"></div>
+	                </li>
+	                <li>
+	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/space_photo/kikka/kikka_B1F_eve6.jpg) center center no-repeat;background-size: cover;"></div>
+	                </li>
+	                <li>
+	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/space_photo/kikka/kikka_B1F_eve7.jpg) center center no-repeat;background-size: cover;"></div>
+	                </li>
+	                <li>
+	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/space_photo/kikka/kikka_B1F_eve8.jpg) center center no-repeat;background-size: cover;"></div>
+	                </li>
+	                <li>
+	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/space_photo/kikka/kikka_B1F_eve9.jpg) center center no-repeat;background-size: cover;"></div>
+	                </li>
+	                <li>
+	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/space_photo/kikka/kikka_B1F_eve10.jpg) center center no-repeat;background-size: cover;"></div>
 	                </li>
                 </ul><!--space__slider-->
                 <div class="flex">
@@ -280,7 +322,7 @@
                         </div><!--space__left__content2-->
                     </div><!--spsce__left-->
                     <div class="space__right">
-                        <img src="<?= base_url('img/floor_well.png') ?>" alt="">
+                        <img src="../../static/sevenevent/img/floor_well_slice/floor_well.png" alt="">
                     </div><!--space__right-->
                 </div><!--flex-->
             </div>
@@ -303,32 +345,32 @@
             <div class="tab2-content tab2-1-content">
                 <ul class="space__slider">
 	                <li>
-	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/mocihkomi0305.jpeg) center center no-repeat;background-size: 99% 350px;"></div>
+	                	<div class="space__slider_pic1"></div>
 	                </li>
 	                <li>
-	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/mocihkomi03052.jpeg) center center no-repeat;background-size: 99% 350px;"></div>
+	                	<div class="space__slider_pic2"></div>
 	                </li>
 	                <li>
-	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/mocihkomi03053.jpeg) center center no-repeat;background-size: 99% 350px;"></div>
+	                	<div class="space__slider_pic3"></div>
 	                </li>
 	                <li>
-	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/mocihkomi03054.jpeg) center center no-repeat;background-size: 99% 350px;"></div>
+	                	<div class="space__slider_pic4"></div>
 	                </li>
                 </ul><!--space__slider-->
             </div>
             <div class="tab2-content tab2-2-content">
                 <ul class="space__slider2">
 	                <li>
-	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/KIKKA_event0304_13.png) center center no-repeat;background-size: 99% 350px;"></div>
+	                	<div class="space__slider_pic_kikka1"></div>
 	                </li>
 	                <li>
-	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/KIKKA_event0304_14.png) center center no-repeat;background-size: 99% 350px;"></div>
+	                	<div class="space__slider_pic_kikka2"></div>
 	                </li>
 	                <li>
-	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/KIKKA_event0304_15.png) center center no-repeat;background-size: cover;"></div>
+	                	<div class="space__slider_pic_kikka3"></div>
 	                </li>
 	                <li>
-	                	<div class="space__slider_pic" style="background: url(../../../static/sevenevent/img/KIKKA_event0304_16.png) center center no-repeat;background-size: 99% 350px;"></div>
+	                	<div class="space__slider_pic_kikka4"></div>
 	                </li>
                 </ul><!--space__slider-->
             </div><!--tab2-content-->

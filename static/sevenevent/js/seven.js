@@ -19,6 +19,19 @@ $(function() {
   infinite: true,
 
   });
+
+
+  $('.space__slider_sp').slick({
+  dots: false,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  adaptiveHeight: true,
+  infinite: true,
+
+  });
+
+
   $('#tab-2').on('click', function() {
         $('.space__slider2').slick('setPosition');
     });
