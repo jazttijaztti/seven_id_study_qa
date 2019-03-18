@@ -627,8 +627,21 @@ body {
     padding-bottom: 5%;
 }
 
+@media only screen and (max-width: 800px){
+  #cafe{
+    background: url(../img/bg_wellcafe.jpg) right center no-repeat;
+    background-size: cover;
+  }
+
+}
+
 .space__slider{
     width: 100%;
+}
+
+.space__slider_pic{
+  width: 100%;
+  height: 350px;
 }
 
 
@@ -636,25 +649,25 @@ body {
 	width: 100%;
 	height: 350px;
     background: url(../../../static/sevenevent/img/mocihkomi0305.jpeg) center center no-repeat;
-    background-size: cover;
+    background-size: 100% 350px;
 }
 .space__slider_pic2{
 	width: 100%;
 	height: 350px;
     background: url(../../../static/sevenevent/img/mocihkomi03052.jpeg) center center no-repeat;
-    background-size: cover;
+    background-size: 100% 350px;
 }
 .space__slider_pic3{
 	width: 100%;
 	height: 350px;
     background: url(../../../static/sevenevent/img/mocihkomi03053.jpeg) center center no-repeat;
-    background-size: cover;
+    background-size: 100% 350px;
 }
 .space__slider_pic4{
 	width: 100%;
 	height: 350px;
     background: url(../../../static/sevenevent/img/mocihkomi03054.jpeg) center center no-repeat;
-    background-size: cover;
+    background-size: 100% 350px;
 }
 
 .space__slider_pic_kikka1{
@@ -687,9 +700,14 @@ body {
 
 @media only screen and (max-width: 800px){
 
+    .space__slider{
+      height: 515px;
+    }
+
     .space__slider_pic1{
       background: url(../../sevenevent/img/SYSTEM_well_sp1.png) center center no-repeat; 
       height: 515px;
+      background-size: 375px 515px;
     }
 
 
@@ -713,21 +731,25 @@ body {
     .space__slider_pic_kikka1{ 
       background: url(../../sevenevent/img/SYSTEM_KIKKA_sp1.jpg) center center no-repeat; 
       height: 515px;
+      background-size: 330px 530px;
     }
 
     .space__slider_pic_kikka2{
       background: url(../../sevenevent/img/SYSTEM_KIKKA_sp2.jpg) center center no-repeat; 
       height: 515px;
+      background-size: 330px 530px;
     }
 
     .space__slider_pic_kikka3{
       background: url(../../sevenevent/img/SYSTEM_KIKKA_sp3.jpg) center center no-repeat; 
       height: 515px;
+      background-size: 330px 530px;
     }
 
     .space__slider_pic_kikka4{
       background: url(../../sevenevent/img/SYSTEM_KIKKA_sp4.jpg) center center no-repeat; 
       height: 515px;
+      background-size: 330px 530px;
     }
 }
 
@@ -745,8 +767,8 @@ body {
 .cafe__contents{
     width: 25%;
     margin-left: 25%;
-    padding-left: 3%;
-    padding-right: 3%;
+    padding-left: 10%;
+    padding-right: 10%;
     padding-bottom: 3%;
     background-color:rgba(255,255,255,0.60);
 }
