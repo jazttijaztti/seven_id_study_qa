@@ -193,8 +193,6 @@
     </div><!--finished-->
     
 
-
-
     <div id="space" class="clearfix">
         <div class="h2__title">
             <h2>SPACE</h2>

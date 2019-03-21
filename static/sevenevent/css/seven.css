@@ -767,8 +767,8 @@ body {
 .cafe__contents{
     width: 25%;
     margin-left: 25%;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
     padding-bottom: 3%;
     background-color:rgba(255,255,255,0.60);
 }
@@ -1199,6 +1199,10 @@ body {
         font-size: 30px;
         margin: 0 auto 20px;
     }
+
+    .h2__title h2{
+      font-size: 50px;
+    }
     .event__img_pic{
 	    height: 200px;
     }
@@ -1212,6 +1216,10 @@ body {
 		    width: 90%;
 		    height: inherit;
 		    margin: 0 auto 20px;
+    }
+
+    .finished__title h2{
+      font-size: 50px;
     }
     .block{
         width: 90%;
