@@ -159,7 +159,16 @@ body {
   letter-spacing: 7px;
 }
 
-
+#bg-video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 700px;
+  height: 100vh; 
+  background: url('../../../static/sevenevent/img/sample_pic.jpg') no-repeat;
+  background-size: cover;
+}
 
 .block{
     width: 50%;
