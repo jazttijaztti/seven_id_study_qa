@@ -59,7 +59,7 @@
 
 
     <div id="top">
-               <video id="bg-video" src="video-output-570D6CCB-D268-4D6F-A93B-FC839E3984D3 2.mp4" autoplay loop poster = '<?= base_url("static/sevenevent/img/sample_pic.jpg") ?>'></video>
+               <video id="bg-video" src="<?=base_url('static/sevenevent/video/video-output-570D6CCB-D268-4D6F-A93B-FC839E3984D3 2.mp4') ?>" autoplay loop poster = '<?= base_url("static/sevenevent/img/sample_pic.jpg") ?>'></video>
 
 <!--         <h1>SEVEN<br>PLACE</h1> -->
 				<div class="top__main">

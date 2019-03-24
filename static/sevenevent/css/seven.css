@@ -166,7 +166,7 @@ body {
   width: 100%;
   min-height: 700px;
   height: 100vh; 
-  background: url('../../../static/sevenevent/img/sample_pic.jpg') no-repeat;
+ /* background: url('../../../static/sevenevent/img/sample_pic.jpg') no-repeat;*/
   background-size: cover;
 }
 
