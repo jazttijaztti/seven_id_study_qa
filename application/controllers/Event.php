@@ -36,7 +36,28 @@ class Event extends CI_Controller {
        $data['page_links'] = $this->pagination->create_links();
        //loading view
        $this->load->view('event/index',$data);
-   }    
+   }
+
+   public function space(){
+     $this->load->view('event/space_kikka');
+   } 
+
+   public function event-index(){
+       $page_config['base_url'] = base_url('event/index');
+       $where['delete_flg'] = 0;
+       $page_config['total_rows'] = $this->Event_model->total_rows($where);
+       $page_config['per_page'] = 10;
+       $page_config['user_page_numbers'] = TRUE;
+       //一覧取得のためのパラメータをモデルに渡す
+       $param['limit'] = $page_config['per_page'];
+       $param['offset'] = $page;
+       $param['order_by'] = 'DESC';
+       $data['event'] = $this->Event_model->get_event($param);
+       $data['finished_event'] = $this->Event_model->get_finished_event();
+       $this->pagination->initialize($page_config);
+       $data['page_links'] = $this->pagination->create_links();
+       $this->load->view('event/event-index', $data);
+   }   
 
 
 

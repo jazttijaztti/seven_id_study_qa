@@ -43,7 +43,7 @@ body {
 
 .menu{
 	position: absolute;
-	right:-250px;
+	right:-242px;
 	top:50%;
 	-moz-transform:translateY(-50%) rotate(90deg);
 	-ms-transform:translateY(-50%) rotate(90deg);
@@ -225,6 +225,7 @@ body {
 .day{
     font-size: 30px;
     padding-top: 15px;
+    font-weight: bold;
 }
 
 .well__icon{
@@ -247,6 +248,24 @@ body {
     text-align: center;
     vertical-align: middle;
     padding-top: 15px;
+    font-size: 15px;
+}
+
+
+.well_event_icon{
+  background: black;
+  color: #fff;
+}
+
+.kikka_event_icon{
+  background: #fff;
+  color: black;
+}
+
+@media only screen and (max-width: 450px){
+  .kikka__icon{
+    margin-right: 60%;
+  }
 }
 
 #finished{
@@ -328,12 +347,10 @@ body {
 	overflow: hidden;
 	border-bottom: 1px #000 solid;
 	margin: 0 0 15px;
-	padding: 0 10px;
 	font-family: "游ゴシック", YuGothic, Verdana, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
 }
 
 .finished__contents_text{
-	padding: 0 10px;
 	font-size: 12px;
 	color: #000;
 	line-height: 1.5;
@@ -391,6 +408,7 @@ body {
     position: absolute;
     right:-15px;
     top:-15px;
+    font-size: 15px;
 }
 
 .kikka{
@@ -420,7 +438,7 @@ body {
     padding-bottom: 5%;
 }
 #space img{
-    width: 100%;
+    width: 130%;
 }
 .space__slider2{
     width: 100%;
@@ -497,7 +515,7 @@ body {
 .tabs2 .tab2-label {
   display: inline-block;
   border: 2px solid #000;
-  background-color: #000;
+  background-color: #808080;
   margin: 0 1px;
   color: #ffff;
    writing-mode: vertical-rl;
@@ -544,10 +562,18 @@ body {
  
 /* 選択されているタブのスタイルを変える */
 .tabs2 input[name="tab2-radio"]:checked + .tab2-label {
-  background-color: #fff;
+  background-color: #FF7F50;
     color: black;
 
 }
+
+
+.tabs2 input[name="tab2-radio"]:checked + .tab2-label2{
+  background-color: #006400;
+    color: black;
+
+}
+
 .tab2{
 	top:110px;
 }
@@ -560,7 +586,7 @@ body {
 .tabs .tab-label {
   display: inline-block;
   border: 2px solid #000;
-  background-color: #000;
+  background-color: #808080;
   margin: 0 1px;
   color: #ffff;
    writing-mode: vertical-rl;
@@ -605,15 +631,15 @@ body {
  
 /* 選択されているタブのスタイルを変える */
 .tabs input[name="tab-radio"]:checked + .tab-label {
-  background-color: #fff;
+  background-color: #FF7F50;
   color: black;
 }
 
 .reserve{
-    width: 40%;
+    width: 32%;
     text-align: center;
-    margin-right: 30%;
-    margin-left: 30%;
+    margin-right: 35%;
+    margin-left: 35%;
     padding-top: 2%;
     padding-bottom:2%;
     padding-right: 2%;
@@ -709,9 +735,6 @@ body {
 
 @media only screen and (max-width: 800px){
 
-    .space__slider{
-      height: 515px;
-    }
 
     .space__slider_pic1{
       background: url(../../sevenevent/img/SYSTEM_well_sp1.png) center center no-repeat; 
@@ -836,7 +859,7 @@ body {
     width: 45%;
 }
 .access__contact{
-    width: 80%;
+    width: 64%;
     text-align: center;
     background-color: #000000;
     border-radius: 10px;
@@ -845,7 +868,7 @@ body {
     clear: both;
     font-family: 'Rasa', serif;
     letter-spacing: 2px;
-    font-size: 17px;
+    font-size: 20px;
 		padding: 4% 5%;
 		margin: 10% auto;
 }
@@ -1117,6 +1140,8 @@ body {
 .back1{
 }
 
+
+
 @media(max-width: 1000px){
     .menu{
         display: none;
@@ -1243,6 +1268,8 @@ body {
     .header{
         display: none !important;
     }
+
+    
     .tabs{
         width: 90%;
         margin: 35px auto 0;

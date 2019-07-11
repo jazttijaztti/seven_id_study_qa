@@ -79,24 +79,6 @@ $(function() {
  
 
 
-$(function(){
-$(window).on('load scroll', function(){
-    
-    if($('#event').length){
-  	  var thisOffset = $('#event').offset().top + $('#event').outerHeight();
-  	}	
-	  if($('#access').length){
-  	  var foo = $('#access').offset().top + $('#access').outerHeight();
-  	}
-    
-    if( $(window).scrollTop() + $(window).height() > thisOffset && $(window).scrollTop() + $(window).height() < foo){
-        $(".header").fadeIn(800)
-    }else{
-        $(".header").fadeOut(800)
-    }
-});
-});
-
 
 
 
