@@ -76,7 +76,7 @@
                 <li><a href="#top">TOP</a></li>
                 <li><a href="#event">EVENT</a></li>
                 <li><a href="#finished">FINISHED EVENT</a></li>
-                <li><a href="#space">SPACE</a></li>
+                <li><a href="<?= base_url('index.php/event/space'); ?>">SPACE</a></li>
                 <li><a href="#system">SYSTEM</a></li>
                 <li><a href="#cafe">CAFE</a></li>
                 <li><a href="#access">ACCESS</a></li>

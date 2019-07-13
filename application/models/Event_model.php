@@ -83,5 +83,29 @@ class event_model extends CI_Model {
         public function get_image_name(){
           
         }
+
+        public function get_event_top($param){
+	  $where_array['delete_flg'] = 0;
+	  $where_array['finished_flg'] = 0;
+ 	  $this->db->select('*')->from('event');
+  	  $this->db->limit($param['limit']);
+	  $this->db->offset(0);
+	  $this->db->where($where_array);
+	  $this->db->order_by('id', $param['order_by']);
+	  $res = $this->db->get()->result_array(); 
+ 	  return $res;
+        }
+
+        public function get_finished_event_top(){
+          $where_array['finished_flg'] = 1;
+	  $where_array['delete_flg'] = 0;
+	  $this->db->select('*')->from('event');
+	  $this->db->where($where_array);
+	  $this->db->order_by('id', 'DESC');
+ 	  $this->db->limit(6);
+          $res = $this->db->get()->result_array();
+
+          return $res;
+        }
 }
 

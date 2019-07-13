@@ -21,7 +21,21 @@ class Event extends CI_Controller {
     
     public function index($page = 0){
          
-       $page_config['base_url'] = base_url('event/index');
+       //一覧取得のためのパラメータをモデルに渡す
+       $param['limit'] = 5;
+       $param['order_by'] = 'DESC';
+       $data['event'] = $this->Event_model->get_event_top($param);
+       $data['finished_event'] = $this->Event_model->get_finished_event_top();
+       //loading view
+       $this->load->view('event/index',$data);
+   }
+
+   public function space(){
+       $this->load->view('event/space_kikka');
+   }    
+
+   public function eventIndex($page=0){
+       $page_config['base_url'] = base_url('event/eventIndex');
        $where['delete_flg'] = 0;
        $page_config['total_rows'] = $this->Event_model->total_rows($where);
        $page_config['per_page'] = 10;
@@ -34,11 +48,8 @@ class Event extends CI_Controller {
        $data['finished_event'] = $this->Event_model->get_finished_event();
        $this->pagination->initialize($page_config);
        $data['page_links'] = $this->pagination->create_links();
-       //loading view
-       $this->load->view('event/index',$data);
-   }    
-
-
+       $this->load->view('event/event-index', $data);
+   }
 
 /*
     //QAの一覧ページ
