@@ -19,7 +19,6 @@ class Event extends CI_Controller {
     }
 
     
-<<<<<<< HEAD
    public function index($page = 0){
      $param['limit'] = 5;
      $param['order_by'] = 'DESC';
@@ -34,24 +33,7 @@ class Event extends CI_Controller {
    } 
 
    public function eventIndex($page = 0){
-=======
-    public function index($page = 0){
-         
-       //一覧取得のためのパラメータをモデルに渡す
-       $param['limit'] = 5;
-       $param['order_by'] = 'DESC';
-       $data['event'] = $this->Event_model->get_event_top($param);
-       $data['finished_event'] = $this->Event_model->get_finished_event_top();
-       //loading view
-       $this->load->view('event/index',$data);
-   }
 
-   public function space(){
-       $this->load->view('event/space_kikka');
-   }    
-
-   public function eventIndex($page=0){
->>>>>>> a210226716a03d3a834e5dcbb85ba151a18f01e5
        $page_config['base_url'] = base_url('event/eventIndex');
        $where['delete_flg'] = 0;
        $page_config['total_rows'] = $this->Event_model->total_rows($where);
@@ -67,7 +49,6 @@ class Event extends CI_Controller {
        $data['page_links'] = $this->pagination->create_links();
        $this->load->view('event/event-index', $data);
    }
-<<<<<<< HEAD
 
    public function contact(){
        $this->load->view('event/contact_form');
@@ -113,8 +94,6 @@ class Event extends CI_Controller {
      return $res;
    }
 
-=======
->>>>>>> a210226716a03d3a834e5dcbb85ba151a18f01e5
 
 /*
     //QAの一覧ページ
