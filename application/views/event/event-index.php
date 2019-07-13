@@ -16,6 +16,93 @@
 <script src="<?= base_url('static/sevenevent/js/seven.js') ?>"></script>
 <script>
 
+$(function(){
+
+
+
+$('#tab-1').click( function(){
+  $('.reserve').css('display', 'none');
+});
+
+$('#tab-2').click( function(){
+  $('.reserve').css('display', 'block');
+});
+
+
+});
+
+</script>
+<style>
+  .reserve{
+    display: none;
+  }
+
+.header{
+  display: block;
+}
+.well_event_icon{
+  background: black;
+  color: #fff;
+    border:solid 2px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 15px;
+    font-size: 15px;
+}
+
+.kikka_event_icon{
+  background: #fff;
+  color: black;
+    border:solid 2px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 15px;
+    font-size: 15px;
+}
+
+.well_finished_event_icon{
+  background: black;
+  color: #fff; 
+    border:solid 2px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 15px;
+    z-index: 2;
+    position: absolute;
+    right:-15px;
+    top:-15px;
+    font-size: 15px;
+}
+
+.kikka_finished_event_icon{
+  background: #fff;
+  color: black; 
+    border:solid 2px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 15px;
+    z-index: 2;
+    position: absolute;
+    right:-15px;
+    top:-15px;
+    font-size: 15px;
+}
+
+a.disabled{
+    pointer-events: none;
+}
+</style>
+</head>
+<body>
+<div class="all">
 
 
 </script>
@@ -45,6 +132,9 @@
 
     <div class="header">
         <ul>
+            <li><a style="color: black;" href="<?= base_url('event/index'); ?>">TOP</a></li>
+            <li style="color: black;"><a style="color: black;" href="#event">EVENT</a></li>
+            <a href="<?= base_url('event/contact'); ?>"><li class="header__contact">CONTACT</li></a>
             <li><a href="#top">TOP</a></li>
             <li><a href="#event">EVENT</a></li>
             <li><a href="#space">SPACE</a></li>
@@ -93,7 +183,7 @@
         </div><!--h2__title-->
         <div class="block">
         <?php foreach ($event as $key => $val){ ?>
-            <a href="<?= show_event_link($val['link']); ?>">
+            <a class="<?= show_event_link_class($val['link']);  ?>" href="<?= show_event_link($val['link']); ?>">
 	            <div class="event__block__contents clearfix">
                 <div class="event__img">
 	                	<div style="background: url(<?= show_event_images($val['image_name']); ?>) center center no-repeat;background-size: cover;" class="event__img_pic"></div>
@@ -103,8 +193,8 @@
                         <div class="day">
                             <p><?= $val['eventdate'] ?></p>
                         </div><!--day-->
-                        <div class="kikka__icon">
-                            <p><?= show_hotel_from_id($val['hotel_id']) ?></p>
+                        <div class="">
+                            <p class="<?= hotel_class($val['hotel_id']); ?>"><?= show_hotel_from_id($val['hotel_id']) ?></p>
                         </div><!--kikka__icon-->
                     </div><!--event__content1-->
                     <div class="event__content2">
@@ -121,6 +211,10 @@
 
 
         </div><!--block-->
+        <div class="viewAll">
+	  <img src="https://s3.ap-northeast-1.amazonaws.com/sevengarden/image/4/SEVENGARDEN-plus2-1562931349.png">
+          <p class="View all">
+	</div>
     </div><!--event-->
 
 
@@ -136,22 +230,24 @@
                 <?php foreach ($finished_event as $key => $val) { ?>
                 <?php if($key%2 == 0 || $key == 0) { ?>
 		        <li class="finished__contents">
-		        	<div class="well">
+		        	<div class="<?= finished_hotel_class($val['hotel_id']); ?>">
 	              <p><?= show_hotel_from_id($val['hotel_id']) ?></p>
 	            </div>
 	            <ul class="finished__pic_list Flist01">
 		            <li class="finished__pic_item">
-		            	<a href="<?= show_event_link($val['link']); ?>" class="finished__pic_link" style="background: url(<?= show_event_images($val['image_name']); ?>) center center no-repeat;background-size: cover;"></a>
+		            	<a href="<?= show_event_link($val['link']); ?>" class="finished__pic_link <?= show_event_link_class($val['link']);  ?> " style="background: url(<?= show_event_images($val['image_name']); ?>) center center no-repeat;background-size: cover;"></a>
                     </li>
 		            <li class="finished__pic_item">
-		            	<a href="<?= show_event_link($val['link']); ?>" class="finished__pic_link" style="background: url(<?= show_event_images($val['image_name']); ?>) center center no-repeat;background-size: cover;"></a>
+		            	<a href="<?= show_event_link($val['link']); ?>" class="finished__pic_link <?= show_event_link_class($val['link']);  ?> " style="background: url(<?= show_event_images($val['image_name']); ?>) center center no-repeat;background-size: cover;"></a>
 		            </li>
 		            <li class="finished__pic_item">
-		            	<a href="<?= show_event_link($val['link']); ?>" class="finished__pic_link" style="background: url(<?= show_event_images($val['image_name']); ?>) center center no-repeat;background-size: cover;"></a>
+		            	<a href="<?= show_event_link($val['link']); ?>" class="finished__pic_link <?= show_event_link_class($val['link']);  ?> " style="background: url(<?= show_event_images($val['image_name']); ?>) center center no-repeat;background-size: cover;"></a>
 		            </li>
 	            </ul>
+	            <a href="" class="finished__link" class="<?= show_event_link_class($val['link']);  ?>" >
 	            <a href="" class="finished__link">
-		            <h3 class="finished__contents_title">
+		            
+                        <h3 class="finished__contents_title">
                       <?= $val['title'] ?>
 		            </h3>
 		            <p class="finished__contents_text">
@@ -165,21 +261,21 @@
                 <?php foreach ($finished_event as $key => $val) { ?>
                 <?php if($key%2 !==0) { ?>
 		        <li class="finished__contents">
-		        	<div class="kikka">
+		        	<div class="<?= finished_hotel_class($val['hotel_id']); ?>">
                 <p><?= show_hotel_from_id($val['hotel_id']); ?></p>
               </div>
 	            <ul class="finished__pic_list Flist02">
 		            <li class="finished__pic_item">
-		            	<a href="<?= show_event_link($val['link']); ?>" class="finished__pic_link" style="background: url(<?= show_event_images($val['image_name']); ?>) center center no-repeat;background-size: cover;"></a>
+		            	<a href="<?= show_event_link($val['link']); ?>" class="finished__pic_link <?= show_event_link_class($val['link']); ?> " style="background: url(<?= show_event_images($val['image_name']); ?>) center center no-repeat;background-size: cover;"></a>
 		            </li>
 		            <li class="finished__pic_item">
-		            	<a href="<?= show_event_link($val['link']); ?>" class="finished__pic_link" style="background: url(<?= show_event_images($val['image_name']); ?>) center center no-repeat;background-size: cover;"></a>
+		            	<a href="<?= show_event_link($val['link']); ?>" class="finished__pic_link <?= show_event_link_class($val['link']);  ?>" style="background: url(<?= show_event_images($val['image_name']); ?>) center center no-repeat;background-size: cover;"></a>
 		            </li>
 		            <li class="finished__pic_item">
-		            	<a href="<?= show_event_link($val['link']);  ?>" class="finished__pic_link" style="background: url(<?= show_event_images($val['image_name']); ?>) center center no-repeat;background-size: cover;"></a>
+		            	<a href="<?= show_event_link($val['link']);  ?>" class="finished__pic_link <?= show_event_link_class($val['link']);  ?> " style="background: url(<?= show_event_images($val['image_name']); ?>) center center no-repeat;background-size: cover;"></a>
 		            </li>
 	            </ul>
-	            <a href="" class="finished__link">
+	            <a href="" class="finished__link <?= show_event_link_class($val['link']);  ?>">
 		            <h3 class="finished__contents_title">
 			            <?= $val['title'] ?>
 		            </h3>
@@ -198,8 +294,8 @@
             <p>SEVEN GAEDEN.All Rights Rserved</p>
         </div><!--footer__left-->
         <div class="footer__right">
-            <a href=""><img src="<?= base_url('static/sevenevent/img/logo_well.png') ?>"></a>
-            <a href=""><img src="<?= base_url('static/sevenevent/img/logo_kikka.png') ?>"></a>
+            <a href="https://seven-garden.com/ja/hotel/SEVENGARDEN"><img src="<?= base_url('static/sevenevent/img/logo_well.png') ?>"></a>
+            <a href="https://seven-garden.com/ja/hotel/KIKKA"><img src="<?= base_url('static/sevenevent/img/logo_kikka.png') ?>"></a>
         </div><!--footer__right-->
     </div><!--footer-->
 </div><!--all-->

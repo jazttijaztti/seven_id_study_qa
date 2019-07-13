@@ -79,4 +79,40 @@ function show_event_link($param){
   }
 }
 
+function show_event_link_class($param){
+  if(empty($param)){
+    $res = 'disabled';
+    return $res;
+  }else{
+    $res = $param;
+    return $param;
+  }
+}
+
+function hotel_class($param){
+  if ($param == 1){
+    $res = 'kikka_event_icon';
+    return $res;
+  }elseif($param == 2){
+    $res = 'well_event_icon';
+    return $res;
+  }else{
+    $res = '';
+    return $res;
+  }
+}
+
+function finished_hotel_class($param){
+  if ($param == 1){
+    $res = 'kikka_finished_event_icon';
+    return $res;
+  }elseif($param == 2){
+    $res = 'well_finished_event_icon';
+    return $res;
+  }else{
+    $res = '';
+    return $res;
+  }
+}
+
 ?>

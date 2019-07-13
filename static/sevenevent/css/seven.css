@@ -2,7 +2,79 @@
 body {
   font-family: "游ゴシック", YuGothic, Verdana, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
 }
+/* formここから */
 
+#mein{
+ margin-left:20%;
+}
+
+.foam-subtitle{
+ font-size:14px;;
+ line-height:1.7;
+ margin-bottom:5%;
+ margin-top: 3%;
+}
+
+.foam-block{
+ border:1px solid #333;
+ padding:4% 3%;
+ width:70%;
+}
+
+.foam-left{
+ float:left;
+ width:10%;
+ background-color: black;
+ color:#FFF;
+ font-size:1.3vw;
+ text-align:center;
+ margin-bottom:5%;
+ letter-spacing: 1.5px;
+}
+
+.foam-left p{
+  margin: 8% 0;
+  font-size: 12px;
+}
+
+.foam-right{
+ float:left;
+ width:80%;
+ color:#333;
+ font-weight:bolder; 
+ margin-left:3%;
+ margin-bottom:2%;
+ font-size: 14px;
+}
+
+input{
+ width:100%;
+ height:6vh;
+ background-color:#EEEEEE;
+ font-size:1.2vw;
+}
+
+textarea{
+ width:100%;
+ height:35vh;
+ background-color:#EEEEEE;
+ font-size:1vw;
+}
+
+.foam-send{
+ border:1px solid #333;
+ padding:4% 15%;
+ width:70%;
+ margin-bottom:15%;
+}
+
+.foam-send >input{
+ background-color:#333;
+ color:#FFF;
+}
+
+
+/* formここまで  */
 .clearfix:after {
   content: "";
   clear: both;
@@ -43,7 +115,7 @@ body {
 
 .menu{
 	position: absolute;
-	right:-250px;
+	right:-242px;
 	top:50%;
 	-moz-transform:translateY(-50%) rotate(90deg);
 	-ms-transform:translateY(-50%) rotate(90deg);
@@ -213,7 +285,7 @@ body {
     padding-bottom: 5%;
     font-size: 20px;
     line-height: 25px;
-
+    font-family: "游ゴシック", YuGothic, Verdana, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
 }
 
 .event__content3{
@@ -225,6 +297,7 @@ body {
 .day{
     font-size: 30px;
     padding-top: 15px;
+    font-weight: bold;
 }
 
 .well__icon{
@@ -247,6 +320,24 @@ body {
     text-align: center;
     vertical-align: middle;
     padding-top: 15px;
+    font-size: 15px;
+}
+
+
+.well_event_icon{
+  background: black;
+  color: #fff;
+}
+
+.kikka_event_icon{
+  background: #fff;
+  color: black;
+}
+
+@media only screen and (max-width: 450px){
+  .kikka__icon{
+    margin-right: 60%;
+  }
 }
 
 #finished{
@@ -266,8 +357,8 @@ body {
     float: left;
     width: 20%;
     height: 265px;
-    font-family: 'Rasa', serif;
-		letter-spacing: 2px;
+    font-family: "游ゴシック", YuGothic, Verdana, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+    letter-spacing: 2px;
 }
 
 .finished__block{
@@ -328,12 +419,10 @@ body {
 	overflow: hidden;
 	border-bottom: 1px #000 solid;
 	margin: 0 0 15px;
-	padding: 0 10px;
-	font-family: "游ゴシック", YuGothic, Verdana, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+        font-family: "游ゴシック";
 }
 
 .finished__contents_text{
-	padding: 0 10px;
 	font-size: 12px;
 	color: #000;
 	line-height: 1.5;
@@ -391,6 +480,7 @@ body {
     position: absolute;
     right:-15px;
     top:-15px;
+    font-size: 15px;
 }
 
 .kikka{
@@ -420,7 +510,7 @@ body {
     padding-bottom: 5%;
 }
 #space img{
-    width: 100%;
+    width: 130%;
 }
 .space__slider2{
     width: 100%;
@@ -497,7 +587,7 @@ body {
 .tabs2 .tab2-label {
   display: inline-block;
   border: 2px solid #000;
-  background-color: #000;
+  background-color: #808080;
   margin: 0 1px;
   color: #ffff;
    writing-mode: vertical-rl;
@@ -544,10 +634,18 @@ body {
  
 /* 選択されているタブのスタイルを変える */
 .tabs2 input[name="tab2-radio"]:checked + .tab2-label {
-  background-color: #fff;
+  background-color: #FF7F50;
     color: black;
 
 }
+
+
+.tabs2 input[name="tab2-radio"]:checked + .tab2-label2{
+  background-color: #006400;
+    color: black;
+
+}
+
 .tab2{
 	top:110px;
 }
@@ -560,7 +658,7 @@ body {
 .tabs .tab-label {
   display: inline-block;
   border: 2px solid #000;
-  background-color: #000;
+  background-color: #808080;
   margin: 0 1px;
   color: #ffff;
    writing-mode: vertical-rl;
@@ -605,15 +703,15 @@ body {
  
 /* 選択されているタブのスタイルを変える */
 .tabs input[name="tab-radio"]:checked + .tab-label {
-  background-color: #fff;
+  background-color: #FF7F50;
   color: black;
 }
 
 .reserve{
-    width: 40%;
+    width: 32%;
     text-align: center;
-    margin-right: 30%;
-    margin-left: 30%;
+    margin-right: 35%;
+    margin-left: 35%;
     padding-top: 2%;
     padding-bottom:2%;
     padding-right: 2%;
@@ -683,35 +781,32 @@ body {
     background: url(../../../static/sevenevent/img/KIKKA_event0304_13.png) center center no-repeat;
     width: 100%;
     height: 350px;
-    background-size: cover;
+    background-size: 100% 400px;
 }
 
 .space__slider_pic_kikka2{ 
     background: url(../../../static/sevenevent/img/KIKKA_event0304_14.png) center center no-repeat;
     width: 100%;
     height: 350px;
-    background-size: cover;
+    background-size: 100% 400px;
 }
 
 .space__slider_pic_kikka3{
     background: url(../../../static/sevenevent/img/KIKKA_event0304_15.png) center center no-repeat;
     width: 100%;
     height: 350px;
-    background-size: cover;
+    background-size: 100% 400px;
 }
 
 .space__slider_pic_kikka4{
     background: url(../../../static/sevenevent/img/KIKKA_event0304_16.png) center center no-repeat;
     width: 100%;
     height: 350px;
-    background-size: cover;
+    background-size: 100% 400px;
 }
 
 @media only screen and (max-width: 800px){
 
-    .space__slider{
-      height: 515px;
-    }
 
     .space__slider_pic1{
       background: url(../../sevenevent/img/SYSTEM_well_sp1.png) center center no-repeat; 
@@ -836,7 +931,7 @@ body {
     width: 45%;
 }
 .access__contact{
-    width: 80%;
+    width: 64%;
     text-align: center;
     background-color: #000000;
     border-radius: 10px;
@@ -845,7 +940,7 @@ body {
     clear: both;
     font-family: 'Rasa', serif;
     letter-spacing: 2px;
-    font-size: 17px;
+    font-size: 20px;
 		padding: 4% 5%;
 		margin: 10% auto;
 }
@@ -1117,6 +1212,7 @@ body {
 .back1{
 }
 
+
 @media(max-width: 1000px){
     .menu{
         display: none;
@@ -1197,6 +1293,38 @@ body {
 	}
 }
 @media(max-width: 600px){
+    #mein {
+     margin-left:0%;
+     padding:3%;
+}
+
+.foam-block {
+    border: 1px solid #333;
+    padding: 4% 3%;
+     width: 100%;
+}
+
+.foam-send {
+    border: 1px solid #333;
+    padding: 4% 15%;
+    width: 100%;
+    margin-bottom: 15%;
+}
+
+input {
+    width: 100%;
+    height: 3vh;
+    background-color: #EEEEEE;
+    font-size: 14px;
+}
+
+textarea {
+    width: 100%;
+    height: 20vh;
+    background-color: #EEEEEE;
+    font-size: 1vw;
+}
+
 	.top__main{
 		width: 85%;
 	}
@@ -1243,6 +1371,8 @@ body {
     .header{
         display: none !important;
     }
+
+    
     .tabs{
         width: 90%;
         margin: 35px auto 0;
@@ -1306,5 +1436,6 @@ body {
     .top__main_title{
 	   	font-size: 50px; 
     }
+{
 }
 

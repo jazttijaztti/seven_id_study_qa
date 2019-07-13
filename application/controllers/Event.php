@@ -19,22 +19,21 @@ class Event extends CI_Controller {
     }
 
     
-    public function index($page = 0){
-         
-       //一覧取得のためのパラメータをモデルに渡す
-       $param['limit'] = 5;
-       $param['order_by'] = 'DESC';
-       $data['event'] = $this->Event_model->get_event_top($param);
-       $data['finished_event'] = $this->Event_model->get_finished_event_top();
-       //loading view
-       $this->load->view('event/index',$data);
+   public function index($page = 0){
+     $param['limit'] = 5;
+     $param['order_by'] = 'DESC';
+     $data['event'] = $this->Event_model->get_event_top($param);
+     $data['finished_event'] = $this->Event_model->get_finished_event_top();
+     //loading view
+     $this->load->view('event/index',$data); 
    }
 
    public function space(){
-       $this->load->view('event/space_kikka');
-   }    
+     $this->load->view('event/space_kikka');
+   } 
 
-   public function eventIndex($page=0){
+   public function eventIndex($page = 0){
+
        $page_config['base_url'] = base_url('event/eventIndex');
        $where['delete_flg'] = 0;
        $page_config['total_rows'] = $this->Event_model->total_rows($where);
@@ -50,6 +49,51 @@ class Event extends CI_Controller {
        $data['page_links'] = $this->pagination->create_links();
        $this->load->view('event/event-index', $data);
    }
+
+   public function contact(){
+       $this->load->view('event/contact_form');
+   }
+
+   public function confirm(){
+     $valid_param = $this->_form_validation();
+     if($valid_param == FALSE){
+       $this->contact();
+       exit;
+     }else{
+       $this->load->model('Email_model');
+
+       $data = array();
+       $data['name']  = $this->input->post('name');
+       $data['email'] = $this->input->post('email');
+       $data['phone_num'] = $this->input->post('phone_num');
+       $data['content'] = $this->input->post('content');
+
+       $this->load->library('parser');
+       
+       $title = 'イベントサイトよりお問い合わせを受け付けました';
+       $message = $this->parser->parse('event/email/contact', $data, TRUE);	
+       
+       $result = $this->Email_model->send_email($title, $message, $data);
+       if(!$result){
+         $this->index();
+         exit;
+       }else{
+         $this->index();
+       }
+     }
+
+   }
+
+   public function _form_validation(){
+     $this->form_validation->set_rules('name', 'お名前', 'required');
+     $this->form_validation->set_rules('email', 'メールアドレス', 'required');
+     $this->form_validation->set_rules('phone_num', '電話番号', 'required');
+     $this->form_validation->set_rules('content', 'お問い合わせ内容', 'required');
+
+     $res = $this->form_validation->run();
+     return $res;
+   }
+
 
 /*
     //QAの一覧ページ
