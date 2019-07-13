@@ -113,6 +113,26 @@ $('#tab-2').click( function(){
 a.disabled{
     pointer-events: none;
 }
+
+.viewAll{
+  display: flex;
+  width: 110px;
+  text-align: center;
+  margin-left: 70%;
+  margin-top: 8%;
+}
+
+.viewAll img{
+  width: 30px;
+}
+
+.viewAll p{
+  width: 70px;
+  padding-top: 5%;
+  font-weight: bold;
+  font-size: 18px;
+  margin-left: 5%
+}
 </style>
 </head>
 <body>
@@ -125,13 +145,13 @@ a.disabled{
 
         <h2>SEVEN PLACE</h2>
         <ul>
-            <li class="back1"><a href="#top">TOP</a></li>
-            <li class="back1"><a href="#event">EVENT</a></li>
-            <li><a href="#finished">FINISHED EVENT</a></li>
+            <li class="back1"><a href="<?= base_url('event/index'); ?>">TOP</a></li>
+            <li class="back1"><a href="<?= base_url('event/eventIndex'); ?>">EVENT</a></li>
+            <li><a href="<?= base_url('event/eventIndex'); ?>">FINISHED EVENT</a></li>
             <li class="back1"><a href="#space">SPACE</a></li>
             <li class="back1"><a href="#cafe">CAFE</a></li>
             <li class="back1"><a href="#access">ACCESS</a></li>
-            <a href=""><li class="back2" >CONTACT</li></a>
+            <a href="<?= base_url('event/contact'); ?>"><li class="back2" >CONTACT</li></a>
         </ul>
       </div>
   </div>
@@ -139,12 +159,12 @@ a.disabled{
 
     <div class="header">
         <ul>
-            <li><a href="#top">TOP</a></li>
-            <li><a href="#event">EVENT</a></li>
+            <li><a href="<?= base_url('event/index'); ?>">TOP</a></li>
+            <li><a href="<?= base_url('event/eventIndex'); ?>">EVENT</a></li>
             <li><a href="#space">SPACE</a></li>
             <li><a href="#cafe">CAFE</a></li>
             <li><a href="#access">ACCESS</a></li>
-            <a href=""><li class="header__contact">CONTACT</li></a>
+            <a href="<?= base_url('event/contact'); ?>"><li class="header__contact">CONTACT</li></a>
         </ul>
     </div><!--header-->
 
@@ -166,13 +186,13 @@ a.disabled{
 				</div>
         <div class="menu">
             <ul>
-                <li><a href="#top">TOP</a></li>
-                <li><a href="#event">EVENT</a></li>
-                <li><a href="#finished">FINISHED EVENT</a></li>
+                <li><a href="<?= base_url('event/index'); ?>">TOP</a></li>
+                <li><a href="<?= base_url('event/eventIndex'); ?>">EVENT</a></li>
+                <li><a href="<?= base_url('event/eventIndex'); ?>">FINISHED EVENT</a></li>
                 <li><a href="#space">SPACE</a></li>
                 <li><a href="#cafe">CAFE</a></li>
                 <li><a href="#access">ACCESS</a></li>
-                <li class="header__contact"><a href="">CONTACT</a></li>
+                <li class="header__contact"><a href="<?= base_url('event/contact'); ?>">CONTACT</a></li>
         </div><!--menu-->
     </div><!--top-->
 
@@ -213,6 +233,10 @@ a.disabled{
 
 
         </div><!--block-->
+        <a href="<?= base_url('event/eventIndex'); ?>"class="viewAll">
+	  <img src="https://s3.ap-northeast-1.amazonaws.com/sevengarden/image/4/SEVENGARDEN-plus2-1562931349.png">
+          <p class="Viewall">View all</p>
+	</a>
     </div><!--event-->
 
 
@@ -284,6 +308,10 @@ a.disabled{
                 <?php } ?>
 	        </ul>
         </div>
+        <a href="<?= base_url('event/eventIndex'); ?>"class="viewAll" style="margin-top: -3%;">
+	  <img src="https://s3.ap-northeast-1.amazonaws.com/sevengarden/image/4/SEVENGARDEN-plus2-1562931349.png">
+          <p class="Viewall">View all</p>
+	</a>
     </div><!--finished-->
     
 
@@ -511,7 +539,7 @@ a.disabled{
                     </div><!--access__content-->
                 </div><!--access__block-->
             </div><!--flex-->
-            <a href="" target="_blank">
+            <a href="<?= base_url('event/contact'); ?>" target="_blank">
                 <div class="access__contact">
                     <p>CONTACT</p>
                 </div><!--access__contact-->

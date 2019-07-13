@@ -18,22 +18,6 @@
 
 $(function(){
 
-$(window).scroll(function(){
-   
-    var scrlTop = $(this).scrollTop(); 
-    console.log(scrlTop);
- 
-    if(scrlTop > 0 && scrlTop < 650){ 
-      $(".header").css('display', 'none');
-      $('.header ul li a').css('color', 'black');
-    }else if(scrlTop > 650 && scrlTop < 7500) {
-     $(".header").css('display', 'block');  
-      $('.header ul li a').css('color', 'black');
-    }else{
-      $(".header").css('display', 'none');
-      $('.header ul li a').css('color', 'black');
-    }
-  });
 
 
 $('#tab-1').click( function(){
@@ -53,7 +37,9 @@ $('#tab-2').click( function(){
     display: none;
   }
 
-
+.header{
+  display: block;
+}
 .well_event_icon{
   background: black;
   color: #fff;
@@ -117,64 +103,19 @@ a.disabled{
 </head>
 <body>
 <div class="all">
-  <div id="nav-drawer">
-      <input id="nav-input" type="checkbox" class="nav-unshown">
-      <label id="nav-open" for="nav-input"><span></span></label>
-      <label class="nav-unshown" id="nav-close" for="nav-input"></label>
-      <div id="nav-content">
-
-        <h2>SEVEN PLACE</h2>
-        <ul>
-            <li class="back1"><a href="#top">TOP</a></li>
-            <li class="back1"><a href="#event">EVENT</a></li>
-            <li><a href="#finished">FINISHED EVENT</a></li>
-            <li class="back1"><a href="#space">SPACE</a></li>
-            <li class="back1"><a href="#cafe">CAFE</a></li>
-            <li class="back1"><a href="#access">ACCESS</a></li>
-            <a href=""><li class="back2" >CONTACT</li></a>
-        </ul>
-      </div>
-  </div>
 
 
     <div class="header">
         <ul>
-            <li><a href="#top">TOP</a></li>
-            <li><a href="#event">EVENT</a></li>
-            <li><a href="#space">SPACE</a></li>
-            <li><a href="#cafe">CAFE</a></li>
-            <li><a href="#access">ACCESS</a></li>
-            <a href=""><li class="header__contact">CONTACT</li></a>
+            <li><a style="color: black;" href="<?= base_url('event/index'); ?>">TOP</a></li>
+            <li style="color: black;"><a style="color: black;" href="#event">EVENT</a></li>
+            <a href="<?= base_url('event/contact'); ?>"><li class="header__contact">CONTACT</li></a>
         </ul>
     </div><!--header-->
 
 
 
 
-    <div id="top">
-               <video id="bg-video" src="<?=base_url('static/sevenevent/video/video-output-570D6CCB-D268-4D6F-A93B-FC839E3984D3 2.mp4') ?>" playsinline autoplay muted loop poster = '<?= base_url("static/sevenevent/img/sample_pic.jpg") ?>'></video>
-
-<!--         <h1>SEVEN<br>PLACE</h1> -->
-				<div class="top__main">
-					<h1 class="top__title">
-						<img src="<?= base_url('static/sevenevent/img/logo_place.png') ?>">
-					</h1>
-	        <div class="top__logo">
-	          <a href=""><img src="<?= base_url('static/sevenevent/img/logo_kikka.png') ?>"></a>
-	          <a href=""><img src="<?= base_url('static/sevenevent/img/logo_well.png')?>"></a>
-	        </div><!--top__logo-->
-				</div>
-        <div class="menu">
-            <ul>
-                <li><a href="#top">TOP</a></li>
-                <li><a href="#event">EVENT</a></li>
-                <li><a href="#finished">FINISHED EVENT</a></li>
-                <li><a href="#space">SPACE</a></li>
-                <li><a href="#cafe">CAFE</a></li>
-                <li><a href="#access">ACCESS</a></li>
-                <li class="header__contact"><a href="">CONTACT</a></li>
-        </div><!--menu-->
-    </div><!--top-->
 
 
 
@@ -213,6 +154,10 @@ a.disabled{
 
 
         </div><!--block-->
+        <div class="viewAll">
+	  <img src="https://s3.ap-northeast-1.amazonaws.com/sevengarden/image/4/SEVENGARDEN-plus2-1562931349.png">
+          <p class="View all">
+	</div>
     </div><!--event-->
 
 
