@@ -172,7 +172,11 @@ a.disabled{
 
 
     <div id="top">
+<<<<<<< HEAD
                <video id="bg-video" src="<?=base_url('static/sevenevent/video/video-output-570D6CCB-D268-4D6F-A93B-FC839E3984D3 2.mp4') ?>" playsinline autoplay muted loop poster = '<?= base_url("static/sevenevent/img/sample_pic.jpg") ?>'></video>
+=======
+               <video id="bg-video" src="<?=base_url('static/sevenevent/video/video-output-570D6CCB-D268-4D6F-A93B-FC839E3984D3 2.mp4') ?>" autoplay muted loop poster = '<?= base_url("static/sevenevent/img/sample_pic.jpg") ?>'></video>
+>>>>>>> a210226716a03d3a834e5dcbb85ba151a18f01e5
 
 <!--         <h1>SEVEN<br>PLACE</h1> -->
 				<div class="top__main">
@@ -186,10 +190,18 @@ a.disabled{
 				</div>
         <div class="menu">
             <ul>
+<<<<<<< HEAD
                 <li><a href="<?= base_url('event/index'); ?>">TOP</a></li>
                 <li><a href="<?= base_url('event/eventIndex'); ?>">EVENT</a></li>
                 <li><a href="<?= base_url('event/eventIndex'); ?>">FINISHED EVENT</a></li>
                 <li><a href="#space">SPACE</a></li>
+=======
+                <li><a href="#top">TOP</a></li>
+                <li><a href="#event">EVENT</a></li>
+                <li><a href="#finished">FINISHED EVENT</a></li>
+                <li><a href="<?= base_url('index.php/event/space'); ?>">SPACE</a></li>
+                <li><a href="#system">SYSTEM</a></li>
+>>>>>>> a210226716a03d3a834e5dcbb85ba151a18f01e5
                 <li><a href="#cafe">CAFE</a></li>
                 <li><a href="#access">ACCESS</a></li>
                 <li class="header__contact"><a href="<?= base_url('event/contact'); ?>">CONTACT</a></li>

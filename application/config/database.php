@@ -77,7 +77,11 @@ $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
 	'username' => 'root',
+<<<<<<< HEAD
 	'password' => '7garden3',
+=======
+	'password' => 'Pa123456!',
+>>>>>>> a210226716a03d3a834e5dcbb85ba151a18f01e5
 	'database' => 'seven_event',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',

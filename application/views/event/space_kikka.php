@@ -16,6 +16,7 @@
   <script src="<?= base_url('static/sevenevent/js/seven.js') ?>"></script>
   <script>
 
+<<<<<<< HEAD
   </script>
 
   <style>
@@ -144,3 +145,15 @@
 </body>
 </html>
 
+=======
+
+
+  </script>
+</head>
+<body>
+  <div class="wrapper">
+    
+  </div>  
+</body>
+</html>
+>>>>>>> a210226716a03d3a834e5dcbb85ba151a18f01e5
