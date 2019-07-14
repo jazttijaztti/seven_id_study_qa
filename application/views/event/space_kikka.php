@@ -67,9 +67,14 @@
       width: 100%;
     }
 
+    .space_party_pc{
+      display: none;
+    }  
+
     .space_party_sp{
       width: 80%;
       margin: 0 auto;
+      display: block;
     }
 
     .space_party_sp img{

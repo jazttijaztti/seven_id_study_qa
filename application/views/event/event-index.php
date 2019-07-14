@@ -108,26 +108,6 @@ a.disabled{
 </script>
 </head>
 <body>
-<div class="all">
-  <div id="nav-drawer">
-      <input id="nav-input" type="checkbox" class="nav-unshown">
-      <label id="nav-open" for="nav-input"><span></span></label>
-      <label class="nav-unshown" id="nav-close" for="nav-input"></label>
-      <div id="nav-content">
-
-        <h2>SEVEN PLACE</h2>
-        <ul>
-            <li class="back1"><a href="#top">TOP</a></li>
-            <li class="back1"><a href="#event">EVENT</a></li>
-            <li><a href="#finished">FINISHED EVENT</a></li>
-            <li class="back1"><a href="#space">SPACE</a></li>
-            <li class="back1"><a href="#system">SYSTEM</a></li>
-            <li class="back1"><a href="#cafe">CAFE</a></li>
-            <li class="back1"><a href="#access">ACCESS</a></li>
-            <a href=""><li class="back2" >CONTACT</li></a>
-        </ul>
-      </div>
-  </div>
 
 
     <div class="header">
@@ -148,31 +128,6 @@ a.disabled{
 
 
 
-    <div id="top">
-               <video id="bg-video" src="<?=base_url('static/sevenevent/video/video-output-570D6CCB-D268-4D6F-A93B-FC839E3984D3 2.mp4') ?>" autoplay muted loop poster = '<?= base_url("static/sevenevent/img/sample_pic.jpg") ?>'></video>
-
-<!--         <h1>SEVEN<br>PLACE</h1> -->
-				<div class="top__main">
-					<h1 class="top__title">
-						<img src="<?= base_url('static/sevenevent/img/logo_place.png') ?>">
-					</h1>
-	        <div class="top__logo">
-	          <a href=""><img src="<?= base_url('static/sevenevent/img/logo_kikka.png') ?>"></a>
-	          <a href=""><img src="<?= base_url('static/sevenevent/img/logo_well.png')?>"></a>
-	        </div><!--top__logo-->
-				</div>
-        <div class="menu">
-            <ul>
-                <li><a href="#top">TOP</a></li>
-                <li><a href="#event">EVENT</a></li>
-                <li><a href="#finished">FINISHED EVENT</a></li>
-                <li><a href="<?= base_url('index.php/event/space'); ?>">SPACE</a></li>
-                <li><a href="#system">SYSTEM</a></li>
-                <li><a href="#cafe">CAFE</a></li>
-                <li><a href="#access">ACCESS</a></li>
-                <li class="header__contact"><a href="">CONTACT</a></li>
-        </div><!--menu-->
-    </div><!--top-->
 
 
 

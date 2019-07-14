@@ -242,6 +242,28 @@ textarea{
   background-size: cover;
 }
 
+#bg-video-sp{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 600px;
+  height: 100vh;
+ /* background: url('../../../static/sevenevent/img/sample_pic.jpg') no-repeat;*/
+  background-size: cover;
+}
+
+@media only screen and (max-width: 450px){
+  #bg-video{
+    display: none;
+  }
+
+  #bg-video-sp{
+    display: block;
+  }
+}
+
 .block{
     width: 50%;
     margin-left: 25%;
@@ -510,7 +532,7 @@ textarea{
     padding-bottom: 5%;
 }
 #space img{
-    width: 130%;
+    width: 150%;
 }
 .space__slider2{
     width: 100%;
